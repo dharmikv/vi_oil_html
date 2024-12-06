@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* ======================================================= CONTAINER FLUID ======================================================= */
+    .container-fluid{
+        @apply px-75 xlscreen:px-55 lgscreen:px-40 mdscreen:px-30 smscreen:px-20
+    }
+
+    /* ======================================================= TITLE ======================================================= */
+
+    .title h2{
+        @apply text-45 leading-60
+    }
+    .title h3{
+        @apply text-36 leading-48
+    }
+    .title h4{
+        @apply text-24 leading-32
+    }
+
+    .title-primary h1,
+    .title-primary h2,
+    .title-primary h3,
+    .title-primary h4,
+    .title-primary h5,
+    .title-primary h6{
+        @apply font-Worksans  
+    }
+
+    .title-secondary h1,
+    .title-secondary h2,
+    .title-secondary h3,
+    .title-secondary h4,
+    .title-secondary h5,
+    .title-secondary h6{
+        @apply font-Nunito
+    }
+
+    .title-glittery h1,
+    .title-glittery h2,
+    .title-glittery h3,
+    .title-glittery h4,
+    .title-glittery h5,
+    .title-glittery h6{
+        @apply font-Glittery
+    }
+
+    .title-white,
+    .content-white{
+        @apply text-White
+    }
+
+    .title-brown,
+    .content-brown{
+        @apply text-brown
+    }
+
+    .title-yellow,
+    .content-yellow{
+        @apply text-yellow
+    }
+
+    .title-gray,
+    .content-gray{
+        @apply text-gray
+    }
+
+    .title-green-light,
+    .preheading-green-light{
+        @apply text-green-100
+    }
+    .title-green-regular,
+    .preheading-green-regular{
+        @apply text-green-200
+    }
+    .title-green-dark,
+    .preheading-green-dark{
+        @apply text-green-300
+    }
+
+    .title-lightgray,
+    .content-lightgray{
+        @apply text-lightgray
+    }
+
+    .preheading span{
+        @apply font-Glittery text-24 leading-32
+    }
+    /* ======================================================= FONT WEIGHT ======================================================= */
+
+    .font-light{
+        @apply font-300
+    }
+
+    .font-regular{
+        @apply font-400
+    }
+
+    .font-medium{
+        @apply font-500
+    }
+
+    .font-semibold{
+        @apply font-600
+    }
+
+    .font-bold{
+        @apply font-700
+    }
+
+    .font-extrabold{
+        @apply font-900
+    }
+    /* ======================================================= CONTENT ======================================================= */
+
+    .content p{
+        @apply mt-5 font-Nunito
+    }
+
+    .content p:first-child{
+        @apply mt-0
+    }
+
+    /* ========================================================== SWIPER ========================================================== */
+
+    .swiper-slide img{
+        @apply w-full h-full relative
+    }
+
+    .value{
+        @apply border-r-1 border-dashed border-White/[0.33] smscreen:border-r-0  
+    }
+
+    .value:nth-child(even){
+        @apply lgscreen:border-r-0
+    }
+
+    input,
+    select,
+    textarea{
+        @apply bg-innputcolor p-16 rounded-30 text-green-200 placeholder:text-green-200 font-Nunito focus-within:outline-1 focus-within:outline-green-100 w-full
+    }
+    /* select{
+        @apply relative
+    }
+    select::before{
+        @apply content-[""] absolute top-0 right-0 bg-[url('../../images/svg/drop-down-arrow.svg')] z-99
+    } */
+}
+
+
+@layer components{
+    /* ======================================================= BUTTONS ======================================================= */
+
+    .btn{
+        @apply py-10 pl-30 pr-10 font-Worksans rounded-55 text-16 leading-content flex items-center
+    }
+    .btn-green{
+        @apply bg-green-200 text-White border-1 border-green-200 transition-all duration-300 ease-out
+    }
+    .btn-white{
+        @apply bg-White text-green-300 border-1 border-White transition-all duration-300 ease-out
+    }
+    .btn span{
+        @apply bg-yellow p-15 rounded-100per w-[40px] h-[40px] ms-24 flex items-center justify-center
+    }
+    .btn-green:hover{
+        @apply bg-White text-green-200 border-1 border-green-200 transition-all duration-300 ease-out
+    }
+    .btn-white:hover{
+        @apply bg-White/20 text-White transition-all duration-300 ease-out
+    }
+
+    /* ======================================================= HEADER ======================================================= */
+
+    header .nav-link{
+        @apply text-green-300 font-Worksans text-nowrap px-10 font-medium flex items-center
+            lgscreen:text-14 transition-all duration-300 ease-out
+    }
+    header .nav-link,
+    footer .nav-link{
+        @apply w-fit
+    }
+    .groundnut-icon,
+    .footer-arrow-icon{
+        @apply invisible opacity-0 transition-all duration-300 ease-out
+    }
+    header .nav-link:hover .groundnut-icon,
+    footer .nav-link:hover .footer-arrow-icon{
+        @apply visible opacity-100 transition-all duration-300 ease-out
+    }
+    header .nav-link:hover a,
+    footer .nav-link:hover a{
+        @apply pl-15 transition-all duration-300 ease-out
+    }
+    .footer-bar .nav-link:hover a{
+        @apply !pl-0
+    }
+    header .nav-link:last-child{
+        @apply me-0
+    }
+
+    /* ======================================================= SIDEBAR ======================================================= */
+
+    .sidebar{
+        @apply bg-green-200 
+    }
+    .sidebar .nav-link{
+        @apply text-White font-Nunito text-24 mb-10
+    }
+    .sidebar .nav-link:last-child{
+        @apply mb-0
+    }
+    .head-layer{
+        @apply drop-shadow-headershadow
+    }
+
+    /* ======================================================= FOOTER ======================================================= */
+
+    footer{
+        @apply bg-green-200
+    }
+    .footer{
+        @apply relative
+    } 
+    .footer-bar .nav-link{
+        @apply !mt-0 transition-all duration-300 ease-out
+    }
+    .footer-bar .nav-link:hover{
+        @apply text-yellow transition-all duration-300 ease-out
+    }
+    .social-icon{
+        @apply flex items-center justify-center bg-yellow rounded-100per p-18  transition-all ease-out duration-300
+    }
+    .social-icon:hover{
+        @apply bg-White transition-all ease-out duration-300
+    }
+    .social-icons-list a{
+        @apply me-16
+    }
+    .social-icons-list a:last-child{
+        @apply me-0
+    }
+    
+    .emailinput{
+        @apply bg-innputcolor/20 w-full p-16 rounded-30 font-Nunito text-White focus-visible:outline-none
+    }
+    .emailinput::placeholder{
+        @apply text-White font-Nunito
+    }
+}
+
+@layer utilities{
+    /* ========================================================== HEADER ========================================================== */
+
+    .is-sticky {
+        animation: headerStickyAnimation 0.5s ease-in-out;
+        @apply fixed top-0 left-0 w-full z-[50] transition-all duration-500 bg-White shadow-md 
+    }
+    @keyframes headerStickyAnimation {
+        0% {
+            opacity: 0.5;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .nav-logo h2{
+        @apply font-Babes uppercase text-36
+    }
+    .icon{
+        @apply border-1 border-green-200/40 lg:p-18 p-10 rounded-100per flex items-center justify-center transition-all duration-300 ease-out
+    }
+    .icon:hover{
+        @apply bg-lightgray transition-all duration-300 ease-out
+    }
+    .icons a{
+        @apply me-14
+    }
+    .icons a:last-child{
+        @apply me-0
+    }
+
+    /* ========================================================== HERO SECTION ========================================================== */
+    .swiper-slide{
+        @apply relative
+    }
+    /* .third-slide img{
+        @apply pt-25
+    } */
+    .third-slide::before{
+        @apply content-[""] absolute top-0 left-0 w-full h-full bg-cover bg-[url('../../images/png/hero-banner-three-before.png')]
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        @apply !text-green-200
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after{
+        @apply !text-28
+    }
+
+    /* ========================================================== FOOTER ========================================================== */
+
+    footer .nav-logo{
+        @apply text-White
+    }
+    .footer-before-img{
+        @apply relative 
+    }
+    .footer-before-img::before{
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/footer-bg-update.png')] w-full h-full bg-no-repeat -z-[1];
+        background-size: unset;
+        background-position: bottom;
+    }
+    .footer-title{
+        @apply  relative pb-10
+    }
+    .footer-title::after{
+        @apply content-[""] absolute bottom-0 left-0 w-[52px] bg-yellow h-[3px] bg-contain z-10
+    }
+    .footer span{
+        @apply font-Nunito text-White
+    }
+    .footer .nav-link{
+        @apply text-White mt-14 p-0 font-Nunito me-0 flex items-center
+    }
+    .footer .nav-link:first-child{
+        @apply mt-0
+    }
+    .contact-links{
+        @apply mt-14
+    }
+    .contact-links:first-child{
+        @apply mt-0
+    }
+
+    /* .about-img{
+        @apply relative pt-[126.53%]
+    }
+    .about-img img{
+        @apply absolute top-0 left-0 w-full h-full
+    } */
+}
