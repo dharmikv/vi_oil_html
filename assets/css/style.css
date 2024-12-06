@@ -316,8 +316,7 @@
         @apply relative 
     }
     .footer-before-img::before{
-        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/footer-bg-update.png')] w-full h-full bg-no-repeat -z-[1];
-        background-size: unset;
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/footer-bg-update.png')] w-full h-full bg-no-repeat -z-[1] bg-cover  xxlscreen:bg-[unset];
         background-position: bottom;
     }
     .footer-title{

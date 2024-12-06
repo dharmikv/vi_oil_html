@@ -1552,10 +1552,10 @@ footer .nav-logo{
   height: 100%;
   width: 100%;
   background-image: url('../../images/png/footer-bg-update.png');
+  background-size: cover;
   background-repeat: no-repeat;
   --tw-content: "";
   content: var(--tw-content);
-  background-size: unset;
   background-position: bottom;
 }
 
