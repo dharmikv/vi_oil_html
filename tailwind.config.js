@@ -11,11 +11,13 @@ module.exports = {
       Glittery: ["Glittery"],
     },
     colors:{
+      transparent:"transparent",
       green:{
         100:"#278D45",
         200:"#0D401C",
         300:"#072010"
       },
+      black:"#000000",
       yellow:"#F8C32C",
       brown:"#52320A",
       semiwhite:"#F3F0EB",
@@ -121,8 +123,12 @@ module.exports = {
     lineHeight:{
       content:"22px",
       32:'32px',
+      43:'43px',
       48:'48px',
+      52:'52px',
       60:'60px',
+      64:'64px',
+      72:'72px',
     },
     fontSize:{
       10: '10px',
@@ -182,7 +188,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "green-gradient":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)"
+        "green-gradient":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)",
+        "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)"
       },
       dropShadow:{
         headershadow:"0px 7px 4px rgba(0, 0, 0, 0.25)"

@@ -12,12 +12,18 @@
     }
 
     /* ======================================================= TITLE ======================================================= */
+    .title h1{
+        @apply text-55 leading-72
+            xlscreen:text-50 xlscreen:leading-64
+                lgscreen:text-42 lgscreen:leading-60
+                    mdscreen:text-32 mdscreen:leading-48
 
+    }
     .title h2{
         @apply text-45 leading-60
     }
     .title h3{
-        @apply text-36 leading-48
+        @apply text-36 leading-43
     }
     .title h4{
         @apply text-24 leading-32
@@ -60,8 +66,14 @@
         @apply text-brown
     }
 
+    .title-black,
+    .content-black{
+        @apply text-black
+    }
+
     .title-yellow,
-    .content-yellow{
+    .content-yellow,
+    .preheading-yellow{
         @apply text-yellow
     }
 
@@ -71,15 +83,18 @@
     }
 
     .title-green-light,
-    .preheading-green-light{
+    .preheading-green-light,
+    .content-green-light{
         @apply text-green-100
     }
     .title-green-regular,
-    .preheading-green-regular{
+    .preheading-green-regular,
+    .content-green-regular{
         @apply text-green-200
     }
     .title-green-dark,
-    .preheading-green-dark{
+    .preheading-green-dark,
+    .content-green-dark{
         @apply text-green-300
     }
 
@@ -90,6 +105,9 @@
 
     .preheading span{
         @apply font-Glittery text-24 leading-32
+    }
+    .farming-section .preheading span{
+        @apply text-32
     }
     /* ======================================================= FONT WEIGHT ======================================================= */
 
@@ -112,6 +130,10 @@
     .font-bold{
         @apply font-700
     }
+    
+    .font-bolder{
+        @apply font-800
+    }
 
     .font-extrabold{
         @apply font-900
@@ -123,6 +145,13 @@
     }
 
     .content p:first-child{
+        @apply mt-0
+    }
+
+    .content-secondary p{
+        @apply mt-5 font-Worksans
+    }
+    .content-secondary p:first-child{
         @apply mt-0
     }
 
@@ -178,10 +207,12 @@
 
     /* ======================================================= HEADER ======================================================= */
 
+    
     header .nav-link{
         @apply text-green-300 font-Worksans text-nowrap px-10 font-medium flex items-center
             lgscreen:text-14 transition-all duration-300 ease-out
     }
+
     header .nav-link,
     footer .nav-link{
         @apply w-fit
@@ -257,7 +288,6 @@
 
 @layer utilities{
     /* ========================================================== HEADER ========================================================== */
-
     .is-sticky {
         animation: headerStickyAnimation 0.5s ease-in-out;
         @apply fixed top-0 left-0 w-full z-[50] transition-all duration-500 bg-White shadow-md 
@@ -281,32 +311,41 @@
     .icon:hover{
         @apply bg-lightgray transition-all duration-300 ease-out
     }
-    .icons a{
+    /* .icons a{
         @apply me-14
     }
     .icons a:last-child{
         @apply me-0
-    }
+    } */
 
     /* ========================================================== HERO SECTION ========================================================== */
-    .swiper-slide{
-        @apply relative
+
+    .slide-overlay::before{
+        @apply content-[""] absolute top-0 left-0 w-full h-full bg-black opacity-20 z-10
     }
-    /* .third-slide img{
-        @apply pt-25
-    } */
     .third-slide::before{
         @apply content-[""] absolute top-0 left-0 w-full h-full bg-cover bg-[url('../../images/png/hero-banner-three-before.png')]
     }
     .swiper-button-next,
     .swiper-button-prev{
-        @apply !text-green-200
+        @apply !text-White
     }
     .swiper-button-next:after,
     .swiper-button-prev:after{
-        @apply !text-28
+        @apply !text-28 font-extrabold
+    }
+    .tesimonial-slider-section .swiper-button-next,
+    .tesimonial-slider-section .swiper-button-prev{
+        @apply !text-green-200
+    }
+    .tesimonial-slider-section .swiper-button-next:after,
+    .tesimonial-slider-section .swiper-button-prev:after{
+        @apply !text-28 font-extrabold
     }
 
+    .testimonial-slider{
+        @apply !px-100
+    }
     /* ========================================================== FOOTER ========================================================== */
 
     footer .nav-logo{
@@ -316,7 +355,7 @@
         @apply relative 
     }
     .footer-before-img::before{
-        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/footer-bg-update.png')] w-full h-full bg-no-repeat -z-[1] bg-cover  xxlscreen:bg-[unset];
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/footer-bg-update.png')] w-full h-full bg-no-repeat -z-[1] bg-cover;
         background-position: bottom;
     }
     .footer-title{
@@ -340,11 +379,30 @@
     .contact-links:first-child{
         @apply mt-0
     }
-
-    /* .about-img{
-        @apply relative pt-[126.53%]
+    .about-img{
+        @apply relative pt-[126.53%] w-full h-full
     }
     .about-img img{
         @apply absolute top-0 left-0 w-full h-full
-    } */
+    }
+
+    .farming-section{
+        @apply bg-[url(../../images/png/farm-landscape-2.png)] bg-no-repeat bg-contain bg-bottom
+    }
+
+    .clip-pathimg{
+        clip-path: polygon(34% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .farm-img{
+        @apply relative
+    }
+    .farm-img::before{
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/farm-img.png')] bg-contain bg-no-repeat w-full h-full bg-bottom
+    }
+    .process-section{
+        @apply relative
+    }
+    .process-section::before{
+        @apply content-[""] absolute top-0 left-0 bg-[unset] bg-left-bottom bg-no-repeat bg-[url('../../images/png/village-img.png')] w-full h-full
+    }
 }

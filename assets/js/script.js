@@ -4,7 +4,26 @@ var swiper = new Swiper(".hero-section-slider", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+var swiper = new Swiper(".tesimonial-slider", {
+    loop:true,
+    slidesPerView: 1,
+    breakpoints:{
+        768:{
+            slidesPerView:2
+        },
+        1440:{
+            spaceBetween:"20%",
+            slidesPerView:2
+        },
+    },
+    spaceBetween: "20%",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 jQuery(document).ready(function ($) { 
     if ($(window).scrollTop() >= 70) {
