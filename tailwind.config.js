@@ -29,13 +29,16 @@ module.exports = {
     padding: {
       0: '0px',
       5: '5px',
+      8:'8px',
       10: '10px',
       15: '15px',
       16:'16px',
+      17:'17px',
       18:'18px',
       19: '19px',
       20: '20px',
       25: '25px',
+      27:'27px',
       28:'28px',
       30: '30px',
       35: '35px',
@@ -62,8 +65,10 @@ module.exports = {
     margin: {
       auto: 'auto',
       0: '0px',
+      3:'3px',
       5: '5px',
       7:'7px',
+      8:'8px',
       10: '10px',
       12:'12px',
       14:'14px',
@@ -122,6 +127,7 @@ module.exports = {
     },
     lineHeight:{
       content:"22px",
+      20:'20px',
       32:'32px',
       43:'43px',
       48:'48px',
@@ -189,13 +195,14 @@ module.exports = {
     extend: {
       backgroundImage: {
         "green-gradient":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)",
-        "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)"
+        "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)",
+        "video-gradient":"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)"
       },
       dropShadow:{
         headershadow:"0px 7px 4px rgba(0, 0, 0, 0.25)"
       },
       zIndex:{
-        99:"99px",
+        99:'99',
       },
       screens:{
         xxs: { min : "320px" },
@@ -232,6 +239,7 @@ module.exports = {
       },
 
       opacity:{
+        1:"100%",
         14.9:"14.9%"
       }
     },

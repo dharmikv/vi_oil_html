@@ -10,7 +10,7 @@ var swiper = new Swiper(".tesimonial-slider", {
     loop:true,
     slidesPerView: 1,
     breakpoints:{
-        768:{
+        1024:{
             slidesPerView:2
         },
         1440:{
@@ -68,4 +68,38 @@ open_btn.addEventListener("click", function () {
 close_btn.addEventListener("click", function () {
     sidebar_timeline.reverse();
     document.body.style.overflow = '';
+});
+
+
+const video = document.getElementById('video');
+const playButton = document.getElementById('playButton');
+const playIcon = playButton.querySelector('.play-icon');
+const videoSection = document.querySelector('.video-section');
+
+playButton.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playIcon.src = '../assets/images/svg/pause-btn.svg';
+        videoSection.classList.add('playing');
+    } else {
+        video.pause();
+        playIcon.src = '../assets/images/svg/play-btn.svg';
+        videoSection.classList.remove('playing');
+    }
+});
+
+
+const checkbox = document.getElementById('custom-checkbox');
+const tickContainer = document.querySelector('.check-tick');
+console.log(checkbox);
+console.log(tickContainer);
+
+
+// Function to toggle the tick image based on checkbox state
+checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+        tickContainer.classList.remove('hidden');
+    } else {
+        tickContainer.classList.add('hidden');
+    }
 });
