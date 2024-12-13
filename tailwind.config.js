@@ -126,9 +126,13 @@ module.exports = {
       900:'900'
     },
     lineHeight:{
-      content:"22px",
       20:'20px',
+      content:"22px",
+      28:'28px',
       32:'32px',
+      36:'36px',
+      38:'38px',
+      40:'40px',
       43:'43px',
       48:'48px',
       52:'52px',

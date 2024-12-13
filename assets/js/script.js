@@ -89,17 +89,13 @@ playButton.addEventListener('click', () => {
 });
 
 
-const checkbox = document.getElementById('custom-checkbox');
-const tickContainer = document.querySelector('.check-tick');
-console.log(checkbox);
-console.log(tickContainer);
+// const checkbox = document.getElementById('custom-checkbox');
+// const tickContainer = document.querySelector('.check-tick,.check-tick img');
 
-
-// Function to toggle the tick image based on checkbox state
-checkbox.addEventListener('change', function() {
-    if (checkbox.checked) {
-        tickContainer.classList.remove('hidden');
-    } else {
-        tickContainer.classList.add('hidden');
-    }
-});
+// checkbox.addEventListener('change', function () {
+//     if (checkbox.checked) {
+//         tickContainer.classList.remove('hidden');
+//     } else {
+//         tickContainer.classList.add('hidden');
+//     }
+// });
