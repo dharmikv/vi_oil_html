@@ -27,7 +27,6 @@
                     mdscreen:text-30 mdscreen:leading-36
                         smscreen:text-28 smscreen:leading-32
                             xsscreen:text-24 xsscreen:leading-28
-                
     }
     .title h3{
         @apply text-40 leading-48
@@ -46,11 +45,18 @@
         @apply text-24 leading-32
             smscreen:text-20 smscreen:leading-28
     }
-
     .title h6{
         @apply text-20 leading-28
             mdscreen:text-16 mdscreen:leading-content
                 smscreen:text-14 smscreen:leading-20
+    }
+    
+    .big h1{
+        @apply text-72 leading-93
+            xlscreen:text-50 xlscreen:leading-64
+                lgscreen:text-42 lgscreen:leading-60
+                    mdscreen:text-32 mdscreen:leading-48
+                        smscreen:text-32 smscreen:leading-36
     }
     .big h2{
         @apply text-55 leading-72
@@ -60,6 +66,13 @@
                     smscreen:text-30 smscreen:leading-36
                         xsscreen:text-24 xsscreen:leading-32
     }
+   .big h4{
+        @apply text-32 leading-38
+            lgscreen:text-28 lgscreen:leading-36
+                mdscreen:text-24 mdscreen:leading-32
+                    smscreen:text-22 smscreen:leading-28
+                        xsscreen:text-20 xsscreen:leading-content
+   }
     .title-primary h1,
     .title-primary h2,
     .title-primary h3,
@@ -196,7 +209,7 @@
     }
 
     .value{
-        @apply border-r-1 border-dashed border-White/[0.33] smscreen:border-r-0  
+        @apply border-r-1 border-dashed border-White/[0.33] 576screen:border-r-0  
     }
 
     .value:nth-child(even){
@@ -216,7 +229,7 @@
     /* ======================================================= BUTTONS ======================================================= */
 
     .btn{
-        @apply py-8 pl-30 pr-10 font-Worksans rounded-55 text-16 leading-content mdscreen:text-14 mdscreen:leading-20 flex items-center
+        @apply py-6.5 pl-30 pr-10 font-Worksans rounded-55 text-16 leading-content mdscreen:text-14 mdscreen:leading-20 flex items-center
     }
     .btn-green{
         @apply bg-green-200 text-White border-1 border-green-200 transition-all duration-300 ease-out
@@ -315,7 +328,7 @@
     }
     
     .emailinput{
-        @apply bg-innputcolor/20 w-full py-17 px-30 rounded-30 font-Nunito text-White focus-visible:outline-none mdscreen:text-14
+        @apply bg-innputcolor/20 w-full py-17.5 px-30 rounded-30 font-Nunito text-White focus-visible:outline-none mdscreen:text-14
     }
     .emailinput::placeholder{
         @apply text-White font-Nunito
@@ -347,10 +360,13 @@
         }
     }
     .nav-logo h2{
-        @apply font-Babes uppercase text-36
+        @apply font-Babes uppercase text-28 mdscreen:text-28
     }
     .icon{
         @apply border-1 border-green-200/40 lg:p-18 p-10 rounded-100per flex items-center justify-center transition-all duration-300 ease-out
+    }
+    .icons a{
+        @apply min-w-[40px]
     }
     .icon:hover{
         @apply bg-lightgray transition-all duration-300 ease-out
@@ -464,7 +480,14 @@
     }
 
     .process{
-        @apply bg-green-100 p-27 rounded-100per flex items-center justify-center max-w-[100px] max-h-[100px]
+        @apply bg-green-100 p-27 border-1 border-green-100 rounded-100per flex items-center justify-center max-w-[100px] max-h-[100px] transition-all duration-500 ease-out cursor-pointer
+    }
+    .process:hover{
+        @apply bg-White border-1 border-green-100 border-dashed transition-all duration-500 ease-out
+    }
+
+    .process:hover img{
+        filter: brightness(0) saturate(100%) invert(45%) sepia(15%) saturate(1783%) hue-rotate(85deg) brightness(96%) contrast(96%);
     }
     .process img{
         @apply lg:w-[46px] lg:h-[46px] md:w-[30px] md:h-[30px] h-[30px] w-[30px]
@@ -498,5 +521,50 @@
 
     .custom-checkbox:checked + .custom-check::after {
         @apply opacity-1 transition-all ease-out duration-300
+    }
+
+
+    .tesimonial-slider-section .swiper-button-next:after, .tesimonial-slider-section .swiper-button-prev:after{
+        @apply mdscreen:!text-[20px] 
+    }
+   @screen mdscreen{
+    .testmonial-swiper-navigation{
+        /* @apply mdscreen:top-[auto] mdscreen:transform-inherit mdscreen:py-30 mdscreen:w-[100px] mdscreen:left-50per mdscreen:translate-x-minus_50; */
+        top: auto;
+        transform: inherit;
+        padding: 30px 0px;
+        width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+   }
+
+   .product-section::before{
+        @apply content-[""] absolute top-0 right-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-top hidden md:block
+   }
+   .product-section::after{
+        @apply content-[""] absolute bottom-0 left-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-bottom hidden md:block
+    }
+    .product-benefit{
+        @apply w-[85px] h-[85px] rounded-100per border-2 border-green-200 transition-all ease-out duration-300 bg-White flex items-center justify-center
+    }
+    .product-benefit:hover{
+        @apply border-2 border-dashed transition-all ease-out duration-300
+    }
+    .product-name p{
+        @apply text-24 leading-28
+            smscreen:text-16 smscreen:leading-content
+    }
+    .rating img{
+        @apply max-w-[16px] max-h-[16px]
+    }
+    .product-benefit{
+        @apply w-[80px] h-[80px]
+    }
+    .product-benefit > img{
+        @apply lgscreen:w-[40%]
+    }
+    .product-swiper .swiper-pagination span{
+        @apply !bg-green-200
     }
 }

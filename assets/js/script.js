@@ -25,6 +25,15 @@ var swiper = new Swiper(".tesimonial-slider", {
     },
 });
 
+var swiper = new Swiper(".product-swiper", {
+    loop:true,
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination", // Target the pagination element
+        clickable: true,          // Allow clicking on pagination bullets
+    },
+});
+
 jQuery(document).ready(function ($) { 
     if ($(window).scrollTop() >= 70) {
         $('.header').addClass('is-sticky');

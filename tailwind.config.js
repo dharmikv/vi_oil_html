@@ -29,11 +29,13 @@ module.exports = {
     padding: {
       0: '0px',
       5: '5px',
+      6.5:'6.5px',
       8:'8px',
       10: '10px',
       15: '15px',
       16:'16px',
       17:'17px',
+      17.5:'17.5px',
       18:'18px',
       19: '19px',
       20: '20px',
@@ -87,6 +89,7 @@ module.exports = {
       50: '50px',
       55: '55px',
       60: '60px',
+      64:'64px',
       65: '65px',
       70: '70px',
       75: '75px',
@@ -128,6 +131,7 @@ module.exports = {
     lineHeight:{
       20:'20px',
       content:"22px",
+      24:'24px',
       28:'28px',
       32:'32px',
       36:'36px',
@@ -139,6 +143,7 @@ module.exports = {
       60:'60px',
       64:'64px',
       72:'72px',
+      93:'93px'
     },
     fontSize:{
       10: '10px',
@@ -197,6 +202,9 @@ module.exports = {
       full:'100%'
     },
     extend: {
+      transform: {
+        inherit: 'inherit',
+      },
       backgroundImage: {
         "green-gradient":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)",
         "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)",
@@ -225,7 +233,7 @@ module.exports = {
         lgscreen: { max: "1024px" },
         mdscreen: { max: "768px" },
         smscreen: { max: "640px" },
-        576 : {max : "576px"},
+        "576screen" : {max : "576px"},
         xsscreen: { max: "425px" },
         "2xsscreen":{max:"320px"},
       },
