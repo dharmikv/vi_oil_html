@@ -24,10 +24,13 @@ var swiper = new Swiper(".tesimonial-slider", {
     prevEl: ".swiper-button-prev",
   },
 });
-
 var swiper = new Swiper(".product-swiper", {
   loop: true,
   slidesPerView: 1,
+  effect: "fade", // Add fade effect
+  fadeEffect: {
+    crossFade: true, // Smooth fade transition between slides
+  },
   pagination: {
     el: ".swiper-pagination", // Target the pagination element
     clickable: true, // Allow clicking on pagination bullets
