@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI Oil Mil | About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="../assets/css/dist/style.css">
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <!-- ========================================================== HEADER ========================================================== -->
+    
+    <header class="sticky top-0 z-[99] header w-full bg-White">
+        <div class="relative">
+            <div class="container-fluid">
+                <nav class="flex items-center justify-between w-full pt-30 pb-15 mdscreen:pt-20 mdscreen:pb-10">
+                    <div class="nav-logo">
+                        <a href="#">
+                            <h2>VI Oil Mil</h2>
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <ul class="flex items-center mdscreen:hidden gap-[16px] lgscreen:gap-[10px] lg:me-30 me-15">
+                            <li class="nav-link">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Products</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <div class="flex items-center">
+                            <div class="hidden mdscreen:flex open-button">
+                                <img src="../assets/images/svg/hamburger-menu.svg" alt="">
+                            </div>
+                            <div class="button-container xlscreen:hidden me-35">
+                                <a href="#" class="btn btn-green">
+                                    Buy now
+                                    <span>
+                                        <img src="../assets/images/svg/arrow.svg" alt="arrow">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="icons flex items-center mdscreen:hidden lg:gap-[14px] gap-[12px]">
+                                <a href="#">
+                                    <div class="icon">
+                                        <img src="../assets/images/svg/search-icon.svg" class="w-[18px] h-[18px]"
+                                            alt="search icon">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="icon">
+                                        <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
+                                            alt="cart icon">
+                                    </div>
+                                </a>
+                                <a href="#popup-content" data-fancybox="user-popup">
+                                    <div class="icon">
+                                        <img src="../assets/images/svg/user-icon.svg" class="w-[18px] h-[18px]" alt="user icon">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="w-full absolute top-full header-pattern">
+                <img src="../assets/images/svg/shape-layer-1.svg" class="w-full h-[16px] object-cover head-layer"
+                    alt="header layer">
+            </div>
+        </div>
+    </header>
+
+    <div id="popup-content" class="login-popup" style="display: none;">
+        <h2>User Menu</h2>
+        <p>Welcome! Here are your account options:</p>
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+      <!-- ========================================================== SIDEBAR ========================================================== -->
+
+    <aside class="h-screen sidebar fixed top-0 -right-full backdrop-blur-[35px] w-full hidden mdscreen:flex z-[999]">
+        <div class="container-fluid py-20 w-full">
+            <div class="w-full flex justify-end py-18 close-btn">
+                <img src="../assets/images/svg/close-white.svg" alt="">
+            </div>
+            <ul class="flex flex-col h-full justify-center items-center">
+                <li class="nav-link">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Products</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">About Us</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">FAQs</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    
+    <main> 
+         <!-- ========================================================== BANNER ========================================================== -->
+        
+        <section class="banner-section py-100 smscreen:py-70 relative fade-in">
+            <div class="absolute -bottom-[1px] left-0 z-10 w-full h-[16px]">
+                <img src="../assets/images/svg/grass-image-white.svg" class="h-full object-cover w-full"
+                    alt="">
+            </div>
+            <div class="absolute -bottom-[1px] left-0 z-10">
+                <img src="../assets/images/svg/groundnut-grown.svg"
+                    class="w-fit mdscreen:!max-w-[70%] object-contain" alt="">
+            </div>
+            <div class="absolute -bottom-[1px] right-0 flex justify-end z-10">
+                <img src="../assets/images/svg/groundnut-grown.svg"
+                    class="w-fit mdscreen:!max-w-[70%] object-contain" alt="">
+            </div>
+            <div class="banner-content w-full flex flex-col items-center relative h-full">
+                <div class="title title-white title-primary font-bold">
+                    <h4>About Us</h4>
+                </div>
+                <div class="bread-crumb mt-8">
+                    <nav>
+                        <ul class="flex items-center gap-[4px]">
+                            <li class="bread-crumb-link">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <span>/</span>
+                            <span class="bread-crumb-link">About us</span>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+         <!-- ========================================================== ABOUT DETAIL ========================================================== -->
+
+        <section class="about-detail py-100 lgscreen:py-70 mdscreen:py-40 relative fade-in">
+            <div class="experience-img absolute -top-[25%] lgscreen:-top-[23%] mdscreen:-top-[20%] 576screen:-top-[15%] xsscreen:-top-[12%]translate-y-plus_50 right-[18%] mdscreen:right-[10%] 576screen:right-0 z-20 mdscreen:flex mdscreen:justify-center">
+                <img src="../assets/images/svg/ten-year-experience.svg" class="lgscreen:w-[75%] mdscreen:w-[50%] 576screen:w-[40%]" alt="">
+            </div>
+            <div class="container-fluid">
+                <div class="w-full flex flex-col items-center pb-100">
+                    <div class="title title-green-regular font-bold">
+                        <h4>Lorem ipsum</h4>
+                    </div>
+                    <div class="content content-green-regular max-w-[990px] mt-60 lgscreen:mt-40 smscreen:mt-30">
+                        <p>
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- ========================================================== TIMELINE SECTION  ========================================================== -->
+
+         <section class="timeline-section py-100 relative fade-in">
+            <div class="w-full absolute -top-[1px] left-0">
+                <img src="../assets/images/svg/shape-layer-1.svg" class="w-full h-[16px] object-cover" alt="header layer">
+            </div>
+            <div class="container-fluid">
+                <!-- <div class="flex justify-center items-center w-full"> -->
+                    <div class="max-w-[990px] -translate-y-[89%] mx-auto">
+                        <div class="swiper timeline-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="flex justify-center">
+                                        <div class="max-w-[240px] h-[240px] rounded-100per about-slider">
+                                            <div class="absolute top-50per left-50per translate-x-minus_50 translate-y-minus_50 z-40 plus-icon">
+                                                <img src="../assets/images/svg/plus.svg" alt="">
+                                            </div>
+                                            <img src="../assets/images/png/about-swiper.jpg" class="rounded-100per w-full h-full object-cover" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex justify-center">
+                                        <div class="max-w-[240px] h-[240px] rounded-100per about-slider">
+                                            <div class="absolute top-50per left-50per translate-x-minus_50 translate-y-minus_50 z-40 plus-icon">
+                                                <img src="../assets/images/svg/plus.svg" alt="">
+                                            </div>
+                                            <img src="../assets/images/png/about-swiper.jpg" class="rounded-100per w-full h-full object-cover" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex justify-center">
+                                        <div class="max-w-[240px] h-[240px] rounded-100per about-slider">
+                                            <div class="absolute top-50per left-50per translate-x-minus_50 translate-y-minus_50 z-40 plus-icon">
+                                                <img src="../assets/images/svg/plus.svg" alt="">
+                                            </div>
+                                            <img src="../assets/images/png/about-swiper.jpg" class="rounded-100per w-full h-full object-cover" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex justify-center">
+                                        <div class="max-w-[240px] h-[240px] rounded-100per about-slider">
+                                            <div class="absolute top-50per left-50per translate-x-minus_50 translate-y-minus_50 z-40 plus-icon">
+                                                <img src="../assets/images/svg/plus.svg" alt="">
+                                            </div>
+                                            <img src="../assets/images/png/about-swiper.jpg" class="rounded-100per w-full h-full object-cover" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex justify-center">
+                                        <div class="max-w-[240px] h-[240px] rounded-100per about-slider">
+                                            <div class="absolute top-50per left-50per translate-x-minus_50 translate-y-minus_50 z-40 plus-icon">
+                                                <img src="../assets/images/svg/plus.svg" alt="">
+                                            </div>
+                                            <img src="../assets/images/png/about-swiper.jpg" class="rounded-100per w-full h-full object-cover" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div class="flex justify-between absolute top-50per left-0 w-full z-30">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> 
+                        </div>
+                    </div>
+                    <!-- <div class="flex justify-between absolute top-0 left-50per translate-x-minus_50 w-[calc(100vw-26vw)] z-30"> -->
+                <!-- </div> -->
+            </div>
+            <div class="container-fluid relative">
+                <div class="absolute w-fit -top-[60px] left-50per mdscreen:hidden">
+                    <svg width="13" viewBox="0 0 13 1000" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                        <line x1="6.5" y1="0" x2="6.49987" y2="1000" stroke="black" stroke-opacity="0.33" stroke-dasharray="5 5"/>
+                        <g class="translating-line-circle">
+                            <circle cx="6.5" cy="6.5" r="6.5" fill="#52320A"/>
+                        </g>
+                    </svg>
+                    
+                </div>
+                <div class="zigzag-content flex items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col relative">
+                    <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%] ">
+                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold">
+                            <p>2021</p>
+                        </div>
+                    </div>
+                    <div class="left-side w-6/12 mdscreen:w-full flex justify-center lg:justify-normal 3xl:justify-center 1920:justify-center">
+                        <div class="w-[420px] h-[420px] lgscreen:w-[300px] lgscreen:h-[300px] xsscreen:w-[200px] xsscreen:h-[200px] rounded-100per">
+                            <img src="../assets/images/png/about-timeline.png" class="w-full h-full object-cover rounded-100per" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side w-6/12 mdscreen:w-full max-w-[420px] mdscreen:max-w-[unset]">
+                        <div class="title title-secondary title-green-regular">
+                          <h5>Title 1</h5>
+                        </div>
+                        <div class="content content-gray mt-10">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="zigzag-content flex flex-row-reverse items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col mt-40 relative">
+                    <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%]">
+                        <div class="content content-brown bg-yellow w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold">
+                            <p>2022</p>
+                        </div>
+                    </div>
+                    <div class="left-side w-6/12 mdscreen:w-full flex justify-center lg:justify-end 3xl:justify-center 1920:justify-center">
+                        <div class="w-[420px] h-[420px] lgscreen:w-[300px] lgscreen:h-[300px] xsscreen:w-[200px] xsscreen:h-[200px] rounded-100per">
+                            <img src="../assets/images/png/about-timeline.png" class="w-full h-full object-cover rounded-100per" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side w-6/12 mdscreen:w-full max-w-[420px] mdscreen:max-w-[unset]">
+                        <div class="title title-secondary title-green-regular">
+                          <h5>Title 1</h5>
+                        </div>
+                        <div class="content content-gray mt-10">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+         </section>
+ 
+         <!-- ========================================================== ISO SECTION ========================================================== -->
+
+         <section class="iso-section py-75 mdscreen:py-50 bg-semiwhite fade-in">
+            <div class="flex items-center max-w-[545px] mx-auto justify-between smscreen:px-10">
+                <div class="flex items-center">
+                    <img src="../assets/images/png/iso-1.png"
+                        class="mdscreen:w-[75%] xsscreen:w-[60%] opacity-50 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer"
+                        alt="iso logo">
+                </div>
+                <div class="flex items-center justify-center">
+                    <img src="../assets/images/png/iso-2.png"
+                        class="mdscreen:w-[75%] xsscreen:w-[60%] opacity-50 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer"
+                        alt="iso logo">
+                </div>
+                <div class="flex items-center justify-end">
+                    <img src="../assets/images/png/fssi.png"
+                        class="mdscreen:w-[75%] xsscreen:w-[60%] opacity-50 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer"
+                        alt="fssi logo">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer fade-in">
+        <div class="absolute left-0 w-full -translate-y-[89%] z-40">
+            <img src="../assets/images/svg/footer-grass.svg" class="w-full h-[23px] object-cover" alt="grass img">
+        </div>
+        <div class="container-fluid">
+            <div class="py-60 mdscreen:py-30 flex justify-between items-center mdscreen:flex-col gap-6">
+                <div class="nav-logo w-[194px] mdscreen:w-fit">
+                    <a href="#">
+                        <h2>VI Oil Mil</h2>
+                    </a>
+                </div>
+                <div>
+                    <div class="title title-glittery title-white">
+                        <h2>“Your Tag Line”</h2>
+                    </div>
+                </div>
+                <div class="social-icons-list flex">
+                    <a href="#">
+                        <div class="social-icon">
+                            <img src="../assets/images/svg/facebook.svg" alt="facebook icon">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social-icon">
+                            <img src="../assets/images/svg/instgram.svg" alt="instagram icon">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social-icon">
+                            <img src="../assets/images/svg/facebook.svg" alt="facebook icon">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-before-img">
+            <div class="container-fluid">
+                <div
+                    class="py-60 mdscreen:py-30 relative z-20 border-b-1 border-t-1 border-dashed border-b-White/[0.33] border-t-White/[0.33]">
+                    <div class="grid grid-cols-4 lgscreen:grid-cols-3 mdscreen:grid-cols-2 smscreen:grid-cols-1 gap-8">
+                        <div>
+                            <div class="flex flex-col">
+                                <div class="title title-secondary title-white font-semibold footer-title">
+                                    <h5>Contact Us</h5>
+                                </div>
+                                <div class="mt-20">
+                                    <div class="flex items-center gap-3 contact-links">
+                                        <img src="../assets/images/svg/location-icon.svg" alt="location icon">
+                                        <div class="content content-white  max-w-[192px]">
+                                            <p>Lorem ipsum, lorem ipsum lorem, rajkot-1234556.</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-links">
+                                        <div class="flex items-center gap-3">
+                                            <img src="../assets/images/svg/call.svg" alt="call icon">
+                                            <div class="flex items-center gap-1">
+                                                <span>Call us:</span>
+                                                <a href="tel:123456789">123456789</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-links">
+                                        <div class="flex items-center gap-3">
+                                            <img src="../assets/images/svg/call.svg" alt="call icon">
+                                            <div class="flex items-center gap-1">
+                                                <span>Mail:</span>
+                                                <a href="mailto:vioilmil@gmail.com">vioilmil@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-links">
+                                        <div class="flex items-center gap-3">
+                                            <img src="../assets/images/svg/timing-clock.svg" alt="timing clock icon">
+                                            <span>Mon - Sat: 8.00am - 18.00pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-col">
+                                <div class="title title-secondary title-white font-semibold footer-title">
+                                    <h5>Quick links</h5>
+                                </div>
+                                <ul class="mt-20">
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-col">
+                                <div class="title title-secondary title-white font-semibold footer-title">
+                                    <h5>Factory outlets</h5>
+                                </div>
+                                <ul class="mt-20">
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">Rajkot</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <img src="../assets/images/svg/footer-arrow.svg" class="footer-arrow-icon"
+                                            alt="arrow icon">
+                                        <a href="#">lorem ipsum</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-col">
+                                <div class="title title-secondary title-white font-semibold footer-title">
+                                    <h5>Subscribe Newsletter</h5>
+                                </div>
+                                <div class="mt-20 max-w-[310px] xsscreen:max-w-[unset]">
+                                    <input type="email" class="emailinput" placeholder="Email Address">
+                                    <div class="w-full mt-16">
+                                        <button type="submit" class="btn btn-white justify-between w-full">
+                                            Send Message
+                                            <span>
+                                                <img src="../assets/images/svg/arrow.svg" alt="arrow">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div
+                class="py-30 pb-40 smscreen:py-20 flex justify-between mdscreen:justify-center lg:flex-row flex-col gap-8 mdscreen:gap-4 items-center">
+                <div class="content content-white flex gap-1 items-center">
+                    <p>Copyright © 2024 by</p><a href="#" class="!text-yellow">Vi Oil Mil</a>
+                </div>
+                <div>
+                    <ul class="flex footer-bar items-center flex-wrap gap-x-4 justify-center">
+                        <div class="flex items-center gap-x-4">
+                            <li class="nav-link">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <div class="mx-14 smscreen:mx-0 smscreen:my-14 smscreen:px-0">
+                                <img src="../assets/images/svg/groudnut.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-4">
+                            <li class="nav-link">
+                                <a href="#">Legal Information</a>
+                            </li>
+                            <div class="mx-14 smscreen:mx-0 smscreen:my-14 smscreen:px-0">
+                                <img src="../assets/images/svg/groudnut.svg" alt="">
+                            </div>
+                        </div>
+                        <li class="nav-link">
+                            <a href="#">Return and refund policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

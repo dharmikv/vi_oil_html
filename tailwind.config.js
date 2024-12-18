@@ -39,6 +39,7 @@ module.exports = {
       18:'18px',
       19: '19px',
       20: '20px',
+      24:'24px',
       25: '25px',
       27:'27px',
       28:'28px',
@@ -108,6 +109,7 @@ module.exports = {
       5: '5px',
       10:'10px',
       15: '15px',
+      20:'20px',
       30: '30px',
       50: '50px',
       55: '55px',
@@ -208,7 +210,9 @@ module.exports = {
       backgroundImage: {
         "green-gradient":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)",
         "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)",
-        "video-gradient":"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)"
+        "video-gradient":"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
+        "banner-gradient":"linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+        "about-slider-gradient":"linear-gradient(0deg, rgba(13, 64, 28, 0.3), rgba(13, 64, 28, 0.3))"
       },
       dropShadow:{
         headershadow:"0px 7px 4px rgba(0, 0, 0, 0.25)"
@@ -226,7 +230,9 @@ module.exports = {
         xl: { min : "1280px" },
         xxl: { min : "1440px" },
         "3xl" : { min : "1512px"},
+        "1920": { min : "1920px"},
 
+        "1920": { max: "1920px" },
         "3xlscreen": { max: "1512px" },
         "2xlscreen": { max: "1440px" },
         xlscreen: { max: "1280px" },

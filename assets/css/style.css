@@ -335,6 +335,16 @@
   footer a {
     @apply mdscreen:text-14 mdscreen:leading-20;
   }
+
+  .login-popup{
+    @apply max-w-[819px] w-full rounded-20 !p-24
+  }
+  .login-popup>.carousel__button.is-close{
+    @apply !top-[20px] right-[24px] p-10 bg-green-200 w-[42px] h-[42px]
+  }
+  .login-popup>.carousel__button.is-close>svg{
+    @apply stroke-yellow shadow-none !w-[14px] !h-[14px]
+  }
 }
 
 @layer utilities {
@@ -453,6 +463,8 @@
     @apply absolute top-0 left-0 w-full h-full;
   }
 
+  /* ========================================================== FARMING SECTION ========================================================== */
+
   .farming-section {
     @apply bg-[url(../../images/png/farm-landscape-2.png)] bg-no-repeat bg-contain bg-bottom;
   }
@@ -469,6 +481,9 @@
   .farm-img::before {
     @apply content-[""] absolute top-0 left-0 bg-[url('../../images/png/farm-img.png')] bg-contain bg-no-repeat w-full h-full bg-bottom;
   }
+
+  /* ========================================================== PROCESS SECTION ========================================================== */
+
   .process-section {
     @apply relative;
   }
@@ -496,6 +511,21 @@
   .process-anim::before {
     @apply content-[''] absolute top-[52px] left-0 bg-[url(../../images/svg/svg-anim-line.svg)] w-full h-[1px] lgscreen:hidden -z-[1];
   }
+  @keyframes translation {
+    0% {
+      transform: translateX(0); /* Start at the left end */
+    }
+    100% {
+        transform: translateX(100%); /* Move to the right end */
+    }
+  }
+  .translating-circle{
+    animation: translation 5s linear infinite;
+    transform-origin: center center;
+  }
+
+  /* ========================================================== VIDEO SECTION ========================================================== */
+
   .video-section {
     @apply relative;
   }
@@ -506,7 +536,9 @@
   .video-section.playing::before {
     @apply opacity-0;
   }
-  /* Hide the checkmark image initially */
+
+  /* ========================================================== FORM SECTION ========================================================== */
+  
   .custom-check {
     @apply relative pl-[36px];
   }
@@ -521,10 +553,14 @@
     @apply opacity-1 transition-all ease-out duration-300;
   }
 
+  /* ========================================================== TESTIMONIAL SECTION ========================================================== */
+
+
   .tesimonial-slider-section .swiper-button-next:after,
   .tesimonial-slider-section .swiper-button-prev:after {
     @apply mdscreen:!text-[20px];
   }
+
   @screen mdscreen {
     .testmonial-swiper-navigation {
       /* @apply mdscreen:top-[auto] mdscreen:transform-inherit mdscreen:py-30 mdscreen:w-[100px] mdscreen:left-50per mdscreen:translate-x-minus_50; */
@@ -537,6 +573,8 @@
     }
   }
 
+  /* ========================================================== PRODUCT SECTION ========================================================== */
+
   .product-section::before {
     @apply content-[""] absolute top-0 right-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-top hidden md:block;
   }
@@ -547,7 +585,7 @@
     @apply w-[85px] h-[85px] rounded-100per border-2 border-green-200 transition-all ease-out duration-300 bg-White flex items-center justify-center;
   }
   .product-benefit:hover {
-    @apply border-2 border-dashed transition-all ease-out duration-300;
+    @apply border-2 border-dashed transition-all ease-out duration-300 cursor-pointer;
   }
   .product-name p {
     @apply text-24 leading-28
@@ -575,7 +613,70 @@
   }
 
   .rotating-circle {
-    animation: orbit 5s linear infinite;
+    animation: orbit 7s linear infinite;
     transform-origin: center center;
   }
+
+
+
+    /* ========================================================== BANNER SECTION ========================================================== */
+    .banner-section{
+      @apply bg-[url('../../images/png/banner-img.png')] bg-cover relative
+    }
+    .banner-section::before{
+      @apply content-[""] absolute top-0 left-0 w-full h-full bg-banner-gradient 
+    }
+    .bread-crumb .bread-crumb-link,
+    .bread-crumb span{
+      @apply text-White text-16 leading-content font-Worksans
+          mdscreen:text-14 mdscreen:leading-20
+    }
+    .timeline-section{
+      @apply bg-[url('../../images/png/about-bg.png')] bg-cover
+    }
+    .about-slider {
+      @apply relative transition-all duration-300 ease-out;
+    }
+    
+    .about-slider::before {
+      @apply content-[""] absolute top-0 left-0 w-full h-full bg-about-slider-gradient rounded-100per z-20 transition-all duration-300 ease-out cursor-pointer;
+      opacity: 0;
+    }
+    
+    .about-slider:hover::before {
+      opacity: 1;
+    }
+    
+    .plus-icon {
+      @apply hidden cursor-pointer;
+    }
+    
+    .about-slider:hover .plus-icon {
+      @apply block cursor-pointer;
+    }
+    .timeline-section .swiper-button-next,
+    .timeline-section .swiper-button-prev{
+      @apply !text-yellow  bg-brown p-15 rounded-100per w-[55px] h-[55px] 
+    }
+    .timeline-section .swiper-button-next:after,
+    .timeline-section .swiper-button-prev:after{
+      @apply !text-14
+    }
+    .timeline-section .swiper-button-next{
+      @apply lg:translate-x-[35px]
+    }
+    .timeline-section .swiper-button-prev{
+      @apply lg:-translate-x-[35px]
+    }
+    @keyframes moveCircle {
+      0% {
+        transform: translateY(0); /* Start at the top of the path */
+      }
+      100% {
+        transform: translateY(1000px); /* End at the bottom of the path */
+      }
+    }
+    .translating-line-circle {
+      animation: moveCircle 5s linear infinite;
+    }
 }

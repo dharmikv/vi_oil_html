@@ -27,15 +27,60 @@ var swiper = new Swiper(".tesimonial-slider", {
 var swiper = new Swiper(".product-swiper", {
   loop: true,
   slidesPerView: 1,
-  effect: "fade", // Add fade effect
+  effect: "fade", 
   fadeEffect: {
-    crossFade: true, // Smooth fade transition between slides
+    crossFade: true,
   },
   pagination: {
-    el: ".swiper-pagination", // Target the pagination element
-    clickable: true, // Allow clicking on pagination bullets
+    el: ".swiper-pagination", 
+    clickable: true, 
   },
 });
+
+var swiper = new Swiper(".timeline-swiper", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints:{
+    640:{
+      slidesPerView:2
+    },
+    1024:{
+      slidesPerView:3
+    },
+    1280:{
+      slidesPerView:4
+    },
+    1440:{
+      slidesPerView:4
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+const section = gsap.utils.toArray('.fade-in');
+console.log(section); 
+
+section.forEach((box) => {
+  gsap.fromTo(box, 
+    { autoAlpha: 0 }, 
+    { 
+      duration: 1, 
+      autoAlpha: 1,  
+      scrollTrigger: {
+        trigger: box,
+        start: 'top 80%',  
+        end: 'top 50%',    
+        toggleActions: 'play none none none',
+        once: true
+      }
+    }
+  );
+});
+
 
 jQuery(document).ready(function ($) {
   if ($(window).scrollTop() >= 70) {
@@ -58,7 +103,6 @@ let sidebar = document.querySelector(".sidebar");
 let close_btn = document.querySelector(".close-btn");
 let sidebar_links = document.querySelectorAll(".sidebar ul li ");
 let sidebar_timeline = gsap.timeline();
-console.log(sidebar_links);
 
 sidebar_timeline.to(sidebar, {
   right: 0,
@@ -109,3 +153,6 @@ playButton.addEventListener("click", () => {
 //         tickContainer.classList.add('hidden');
 //     }
 // });
+
+
+// Register GSAP ScrollTrigger plugin globally once

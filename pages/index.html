@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VI Oil Mil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="../assets/css/dist/style.css">
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -26,13 +27,13 @@
                     <div class="flex items-center">
                         <ul class="flex items-center mdscreen:hidden gap-[16px] lgscreen:gap-[10px] lg:me-30 me-15">
                             <li class="nav-link">
-                                <a href="#">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li class="nav-link">
                                 <a href="#">Products</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#">About Us</a>
+                                <a href="about.html">About Us</a>
                             </li>
                             <li class="nav-link">
                                 <a href="#">FAQs</a>
@@ -67,10 +68,9 @@
                                             alt="cart icon">
                                     </div>
                                 </a>
-                                <a href="#">
+                                <a href="#popup-content" data-fancybox="user-popup">
                                     <div class="icon">
-                                        <img src="../assets/images/svg/user-icon.svg" class="w-[18px] h-[18px]"
-                                            alt="user icon">
+                                        <img src="../assets/images/svg/user-icon.svg" class="w-[18px] h-[18px]" alt="user icon">
                                     </div>
                                 </a>
                             </div>
@@ -84,6 +84,16 @@
             </div>
         </div>
     </header>
+    <div id="popup-content" class="login-popup" style="display: none;">
+        <h2>User Menu</h2>
+        <p>Welcome! Here are your account options:</p>
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
 
     <!-- ========================================================== SIDEBAR ========================================================== -->
 
@@ -116,7 +126,7 @@
     <main>
         <!-- ========================================================== HERO SECTION ========================================================== -->
 
-        <section class="hero-section">
+        <section class="hero-section fade-in">
             <div class="swiper hero-section-slider w-full h-screen mdscreen:h-[calc(100vh-87px)]">
                 <div class="swiper-wrapper w-full h-full relative">
 
@@ -305,7 +315,7 @@
 
         <!-- ========================================================== VALUE SCTION ========================================================== -->
 
-        <section class="value-section relative z-40 mt-[-5%] mdscreen:mt-0 mdscreen:py-40">
+        <section class="value-section relative z-40 mt-[-5%] mdscreen:mt-0 mdscreen:py-40 fade-in">
             <div class="container-fluid">
                 <div class="w-full bg-green-gradient rounded-30 p-20">
                     <div class="rounded-15 border-1 border-White/[0.33] border-dashed h-full">
@@ -368,7 +378,7 @@
 
         <!-- ========================================================== ABOUT SCTION ========================================================== -->
 
-        <section class="about-section pt-100 lgscreen:pt-70 mdscreen:pt-0">
+        <section class="about-section pt-100 lgscreen:pt-70 mdscreen:pt-0 fade-in">
             <div class="container-fluid">
                 <div class="grid grid-cols-3 lgscreen:grid-cols-2 gap-6">
                     <div class="pt-45 lgscreen:pt-0">
@@ -469,7 +479,7 @@
 
         <!-- ========================================================== FARM IMG SCTION ========================================================== -->
 
-        <section class="farm-img-section w-full relative">
+        <section class="farm-img-section w-full relative fade-in">
             <img src="../assets/images/png/farm-landscape-2.png" class="w-full" alt="farm">
             <div class="w-full absolute bottom-[-1px] left-0">
                 <img src="../assets/images/svg/shape-layer-down.svg" class="w-full h-[16px] object-cover"
@@ -479,7 +489,7 @@
 
         <!-- ========================================================== PROCESS SCTION ========================================================== -->
 
-        <section class="process-section bg-process-gradient py-100 lgscreen:py-70 mdscreen:py-40 relative">
+        <section class="process-section bg-process-gradient py-100 lgscreen:py-70 mdscreen:py-40 relative fade-in">
             <div class="container-fluid relative">
                 <div class="w-full flex flex-col items-center">
                     <div class="preheading preheading-green-light text-center">
@@ -489,15 +499,16 @@
                         <h4>Mitti ki Mehndi se Bhojan ki Sugandh tak.</h4>
                     </div>
                     <div
-                        class="flex flex-wrap gap-5 justify-between smscreen:justify-center xsscreen:justify-between w-full mt-100 lgscreen:mt-40 mdscreen:mt-30 smscreen:mt-20 process-anim">
-                        <!-- <div class="absolute">
-                            <svg width="100%" height="1" viewBox="0 0 99 1" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <line x1="4.37114e-08" y1="0.5" x2="99" y2="0.500009" stroke="black"
-                                    stroke-opacity="0.33" stroke-dasharray="5 5" />
+                        class="flex flex-wrap gap-5 justify-between smscreen:justify-center xsscreen:justify-between w-full mt-100 lgscreen:mt-40 mdscreen:mt-30 smscreen:mt-20 relative">
+                        <div class="absolute w-full -z-[1] top-[28%] left-0">
+                            <svg viewBox="0 0 1094 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                                <line x1="0" y1="6.5" x2="1094" y2="6.5" stroke="black" stroke-opacity="0.33" stroke-dasharray="5 5" />
+                                <g class="translating-circle">
+                                    <circle cx="6.5" cy="6.5" r="6.5" fill="#F8C32C" />
+                                </g>
                             </svg>
                         </div> 
-                         -->
+                        
                         <div class="flex flex-col items-center">
                             <div class="process basis-1/4 lgscreen:basis-1/3 mdscreen:basis-1/2">
                                 <img src="../assets/images/svg/process-farming.svg" alt="">
@@ -565,7 +576,7 @@
 
         <!-- ========================================================== PRODUCT SCTION ========================================================== -->
 
-        <section class="product-section w-full bg-White py-100 lgscreen:py-70 mdscreen:py-40 relative">
+        <section class="product-section w-full bg-White py-100 lgscreen:py-70 mdscreen:py-40 relative fade-in">
             <div class="container-fluid">
                 <div class="flex w-full justify-center items-center">
                     <div class="max-w-[811px] relative">
@@ -588,20 +599,8 @@
                 </div>
                 <div class="mt-64 mdscreen:mt-40 md:pb-80 lg:pb- w-full flex justify-center relative">
                     <div class="relative mdscreen:hidden">
-                        <!-- <svg viewBox="0 0 646 647" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="w-[646px] h-[647px]  576screen:w-[375px] 576screen:h-[376px] mdscreen:hidden">
-                            <circle cx="322.925" cy="323.353" r="322.357" stroke="#0D401C" stroke-opacity="0.5"
-                                stroke-dasharray="5 5" />
-                        </svg> -->
-                        <!-- <svg width="646" height="650" viewBox="0 0 646 650" fill="none"
-                            class="w-[646px] h-[647px]  576screen:w-[375px] 576screen:h-[376px] mdscreen:hidden"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="322.925" cy="326.353" r="322.357" stroke="#0D401C" stroke-opacity="0.5"
-                                stroke-dasharray="5 5" />
-                            <circle cx="285.5" cy="6.5" r="6.5" transform="rotate(-90 285.5 6.5)" fill="#F8C32C" />
-                        </svg> -->
                         <svg width="646" height="650" viewBox="0 0 646 650" fill="none"
-                            class="w-[646px] h-[647px] 576screen:w-[375px] 576screen:h-[376px] mdscreen:hidden"
+                            class="w-[646px] h-[660px] 576screen:w-[375px] 576screen:h-[376px] mdscreen:hidden"
                             xmlns="http://www.w3.org/2000/svg">
 
                             <!-- Dashed Circular Path -->
@@ -667,7 +666,7 @@
                                                     </div>
                                                     <div
                                                         class="product-name content content-green-dark text-center mt-20">
-                                                        <p>સીંગતેલ</p>
+                                                        <p>સીંગતેલ (15ltr)</p>
                                                     </div>
                                                     <div class="flex gap-[6px] mt-16">
                                                         <div
@@ -701,7 +700,7 @@
                                                     </div>
                                                     <div
                                                         class="product-name content content-green-dark text-center mt-20">
-                                                        <p>સીંગતેલ</p>
+                                                        <p>સીંગતેલ (15kg)</p>
                                                     </div>
                                                     <div class="flex gap-[6px] mt-16">
                                                         <div
@@ -780,7 +779,7 @@
                                     </div>
                                     <div class="flex justify-end">
                                         <div
-                                            class="translate-x-[75px] lgscreen:translate-x-[58px] flex flex-col items-center text-center">
+                                            class="translate-x-[75px] lgscreen:translate-x-[75px] flex flex-col items-center text-center">
                                             <div class="product-benefit">
                                                 <img src="../assets/images/svg/cholostrol-level-icon.svg" alt="">
                                             </div>
@@ -963,7 +962,7 @@
 
         <!-- ========================================================== VIDEO SCTION ========================================================== -->
 
-        <section class="video-section relative w-full h-full video-section">
+        <section class="video-section relative w-full h-full video-section fade-in">
             <div class="w-full absolute -top-[1px] left-0">
                 <img src="../assets/images/svg/shape-layer-1.svg" class="w-full h-[16px] object-cover"
                     alt="header layer">
@@ -1027,7 +1026,7 @@
                                 <div class="preheading preheading-green-dark">
                                     <span>Testimonials From People Who Have Experienced It</span>
                                 </div>
-                                <div class="content content-gray italic mt-24 smscreen:mt-15 md:max-w-[440px]">
+                                <div class="content content-gray italic mt-24 xxlscreen:max-w-[440px] mdscreen:max-w-[unset]">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -1053,7 +1052,7 @@
                                 <div class="preheading preheading-green-dark">
                                     <span>Testimonials From People Who Have Experienced It</span>
                                 </div>
-                                <div class="content content-gray italic mt-24 max-w-[440px] mdscreen:max-w-[unset]">
+                                <div class="content content-gray italic mt-24 xxlscreen:max-w-[440px] mdscreen:max-w-[unset]">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -1079,7 +1078,7 @@
                                 <div class="preheading preheading-green-dark">
                                     <span>Testimonials From People Who Have Experienced It</span>
                                 </div>
-                                <div class="content content-gray italic mt-24 max-w-[440px] mdscreen:max-w-[unset]">
+                                <div class="content content-gray italic mt-24 xxlscreen:max-w-[440px] mdscreen:max-w-[unset]">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -1105,7 +1104,7 @@
                                 <div class="preheading preheading-green-dark">
                                     <span>Testimonials From People Who Have Experienced It</span>
                                 </div>
-                                <div class="content content-gray italic mt-24 max-w-[440px] mdscreen:max-w-[unset]">
+                                <div class="content content-gray italic mt-24 xxlscreen:max-w-[440px] mdscreen:max-w-[unset]">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                         unknown printer took a galley of type and scrambled it to make a type specimen
@@ -1184,7 +1183,7 @@
         <!-- ========================================================== CONTACT SCTION ========================================================== -->
 
         <section
-            class="contact-section pt-[212px] lgscreen:pt-[175px] mdscreen:pt-[150px] smscreen:pt-[120px] pb-60 mdscreen:pb-40 bg-semiwhite relative">
+            class="contact-section pt-[212px] lgscreen:pt-[175px] mdscreen:pt-[150px] smscreen:pt-[120px] pb-60 mdscreen:pb-40 bg-semiwhite relative fade-in">
             <div class="container-fluid">
                 <div class="zigzag-content w-full flex mdscreen:flex-col gap-8">
                     <div class="left-side w-6/12 mdscreen:w-full mdscreen:h-[300px]">
@@ -1264,7 +1263,7 @@
 
         <!-- ========================================================== FARM SECTION ========================================================== -->
 
-        <section class="farm-img-section-second w-full relative">
+        <section class="farm-img-section-second w-full relative fade-in">
             <img src="../assets/images/png/farm-lanscape.png" class="w-full" alt="farm">
             <div class="absolute -bottom-[2px] left-0 w-full">
                 <img src="../assets/images/png/farm-landscape-pattern.png" class="w-full" alt="pattern">
@@ -1273,7 +1272,7 @@
 
         <!-- ========================================================== ISO SECTION ========================================================== -->
 
-        <section class="iso-section py-75 mdscreen:py-50 bg-semiwhite">
+        <section class="iso-section py-75 mdscreen:py-50 bg-semiwhite fade-in">
             <div class="flex items-center max-w-[545px] mx-auto justify-between smscreen:px-10">
                 <div class="flex items-center">
                     <img src="../assets/images/png/iso-1.png"
@@ -1297,7 +1296,7 @@
 
     <!-- ========================================================== FOOTER ========================================================== -->
 
-    <footer class="footer">
+    <footer class="footer fade-in">
         <div class="absolute left-0 w-full -translate-y-[89%] z-40">
             <img src="../assets/images/svg/footer-grass.svg" class="w-full h-[23px] object-cover" alt="grass img">
         </div>
@@ -1489,14 +1488,14 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+        <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
