@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VI Oil Mil</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/dist/style.css">
     <link rel="stylesheet" href="../assets/css/font.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -36,10 +36,10 @@
                                 <a href="about.html">About Us</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#">FAQs</a>
+                                <a href="faq.html">FAQs</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#">Contact Us</a>
+                                <a href="contactus.html">Contact Us</a>
                             </li>
                         </ul>
 
@@ -56,12 +56,12 @@
                                 </a>
                             </div>
                             <div class="icons flex items-center mdscreen:hidden lg:gap-[14px] gap-[12px]">
-                                <a href="#">
+                                <div class="icon-search cursor-pointer">
                                     <div class="icon">
                                         <img src="../assets/images/svg/search-icon.svg" class="w-[18px] h-[18px]"
                                             alt="search icon">
                                     </div>
-                                </a>
+                                </div>
                                 <a href="#">
                                     <div class="icon">
                                         <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
@@ -104,24 +104,34 @@
             </div>
             <ul class="flex flex-col h-full justify-center items-center">
                 <li class="nav-link">
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li class="nav-link">
                     <a href="#">Products</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">About Us</a>
+                    <a href="about.html">About Us</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">FAQs</a>
+                    <a href="faq.html">FAQs</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Contact Us</a>
+                    <a href="contactus.html">Contact Us</a>
                 </li>
             </ul>
         </div>
     </aside>
 
+    <div class="w-full bg-White search fixed left-0 -top-full z-[9999] rounded-b-20">
+      <div class="relative w-full h-full py-[53px]">
+        <div class="max-w-[746px] mx-auto">
+            <input type="text" name="search" id="search" placeholder="Search for items*">
+        </div>
+        <div class="absolute top-30 right-30 cursor-pointer close-search">
+            <img src="../assets/images/svg/close.svg" alt="">
+        </div>
+      </div>
+    </div>
 
     <main>
         <!-- ========================================================== HERO SECTION ========================================================== -->
@@ -315,12 +325,12 @@
 
         <!-- ========================================================== VALUE SCTION ========================================================== -->
 
-        <section class="value-section relative z-40 mt-[-5%] mdscreen:mt-0 mdscreen:py-40 fade-in">
+        <section class="value-section relative z-40 mt-[-5%] mdscreen:mt-0 mdscreen:py-40">
             <div class="container-fluid">
                 <div class="w-full bg-green-gradient rounded-30 p-20">
                     <div class="rounded-15 border-1 border-White/[0.33] border-dashed h-full">
                         <div
-                            class="grid grid-cols-4 lgscreen:grid-cols-2 576screen:grid-cols-1 h-full items-center gap-6 py-75 mdscreen:py-40 smscreen:py-30 576screen:py-20">
+                            class="grid grid-cols-4 lgscreen:grid-cols-2 576screen:grid-cols-1 h-full items-center gap-6 py-75 mdscreen:py-40 smscreen:py-30 576screen:py-20 fade-in">
                             <div class="flex items-center justify-center value">
                                 <div class="flex flex-col">
                                     <img src="../assets/images/svg/authenticity-icon.svg" class="max-h-[100px]"
@@ -341,8 +351,7 @@
                                         <p>Authenticity</p>
                                     </div>
                                     <div class="content content-lightgray font-regular text-center mt-16 max-w-[238px]">
-                                        <p>Lorem ipsum</p>
-                                        <p>Lorem ipsum</p>
+                                        <p>Lorem ipsum <br>Lorem ipsum</p>
                                     </div>
                                 </div>
                             </div>
@@ -510,7 +519,7 @@
                         </div> 
                         
                         <div class="flex flex-col items-center">
-                            <div class="process basis-1/4 lgscreen:basis-1/3 mdscreen:basis-1/2">
+                            <div class="process basis-1/4 lgscreen:basis-1/3 mdscreen:basis-1/2 relative">
                                 <img src="../assets/images/svg/process-farming.svg" alt="">
                             </div>
                             <div class="content content-green-dark text-center mt-16 font-bold max-w-[80px]">
@@ -602,12 +611,8 @@
                         <svg width="646" height="650" viewBox="0 0 646 650" fill="none"
                             class="w-[646px] h-[660px] 576screen:w-[375px] 576screen:h-[376px] mdscreen:hidden"
                             xmlns="http://www.w3.org/2000/svg">
-
-                            <!-- Dashed Circular Path -->
                             <circle cx="322.925" cy="326.353" r="322.357" stroke="#0D401C" stroke-opacity="0.5"
                                 stroke-dasharray="5 5" />
-
-                            <!-- Rotating Yellow Circle -->
                             <g class="rotating-circle">
                                 <circle cx="322.925" cy="326.353" r="6.5" fill="#F8C32C" />
                             </g>
@@ -617,7 +622,6 @@
                             <div class="w-3/12 h-full">
                                 <div class="flex flex-col h-full justify-between">
                                     <div class="flex justify-end">
-                                        <!-- <div class="translate-x-[48px] translate-y-[28px] lgscreen:-translate-y-[7px] flex flex-col items-center text-center"> -->
                                         <div
                                             class="translate-x-[48px] translate-y-[28px] flex flex-col items-center text-center">
                                             <div class="flex flex-col items-center">
@@ -972,10 +976,20 @@
                     alt="header layer">
             </div>
             <video id="video" src="../assets/video/farming-video.webm"
-                class="w-full h-auto md:w-full md:h-[570px] object-cover overflow-hidden" autoplay loop></video>
+                class="w-full h-auto md:w-full md:h-[570px] object-cover overflow-hidden" loop></video>
             <div id="playButton"
-                class="top-50per absolute translate-y-minus_50 left-50per translate-x-minus_50 bg-White rounded-100per cursor-pointer">
-                <img src="../assets/images/svg/play-btn.svg" class="play-icon" alt="play img">
+                class="top-50per absolute translate-y-minus_50 left-50per translate-x-minus_50 cursor-pointer">
+                <div>
+                    <div class="p-38 bg-White/5 rounded-100per first-circle relative">
+                        <div class="p-38 bg-White/10 rounded-100per second-circle">
+                            <div class="p-38 bg-White/15 rounded-100per third-circle">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-White rounded-100per top-50per absolute translate-y-minus_50 left-50per translate-x-minus_50 cursor-pointer">
+                        <img src="../assets/images/svg/play-btn.svg" class="play-icon w-full h-full object-cover" alt="play img">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1019,7 +1033,7 @@
                     </div>
                 </div>
                 <div
-                    class="mt-60 mdscreen:mt-40 smscreen:mt-30 px-100 xlscreen:px-60 mdscreen:px-0 relative tesimonial-slider-section pb-[336px] lgscreen:pb-[300px] mdscreen:pb-[285px] smscreen:pb-[265px] 576screen:pb-[275px]">
+                    class="mt-60 mdscreen:mt-40 smscreen:mt-30 px-100 xlscreen:px-60 mdscreen:px-0 relative tesimonial-slider-section pb-[336px] lgscreen:pb-[300px] mdscreen:pb-[285px] smscreen:pb-[265px] 576screen:pb-[275px] fade-in">
                     <div class="swiper tesimonial-slider">
                         <div class="swiper-wrapper ">
                             <div class="swiper-slide">
@@ -1141,7 +1155,7 @@
                     <div class="container-fluid">
                         <div class="bg-brown h-[448px] mdscreen:h-auto mdscreen:py-60 smscreen:py-50 w-full rounded-30">
                             <div class="zigzag-content flex w-full h-full">
-                                <div class="left-section w-7/12 mdscreen:w-full farm-img">
+                                <div class="left-section w-7/12 mdscreen:w-full farm-img fade-in">
                                     <div class="container-fluid h-full w-full relative">
                                         <div class="flex flex-col h-full justify-center">
                                             <div class="preheading preheading-yellow">
@@ -1492,7 +1506,7 @@
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
         <script src="../assets/js/script.js"></script>

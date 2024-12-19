@@ -44,9 +44,11 @@ module.exports = {
       27:'27px',
       28:'28px',
       30: '30px',
+      32:'32px',
       35: '35px',
       38:'38px',
       40: '40px',
+      44:'44px',
       45: '45px',
       50: '50px',
       50: '50px',
@@ -212,7 +214,8 @@ module.exports = {
         "process-gradient":"linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(243, 240, 235, 0.5) 100%)",
         "video-gradient":"linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)",
         "banner-gradient":"linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
-        "about-slider-gradient":"linear-gradient(0deg, rgba(13, 64, 28, 0.3), rgba(13, 64, 28, 0.3))"
+        "about-slider-gradient":"linear-gradient(0deg, rgba(13, 64, 28, 0.3), rgba(13, 64, 28, 0.3))",
+        "faq-linear":"linear-gradient(180deg, #1C6932 0%, #0D401C 100%)"
       },
       dropShadow:{
         headershadow:"0px 7px 4px rgba(0, 0, 0, 0.25)"

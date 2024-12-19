@@ -61,15 +61,29 @@ var swiper = new Swiper(".timeline-swiper", {
   },
 });
 
-const section = gsap.utils.toArray('.fade-in');
-console.log(section); 
+gsap.registerPlugin(ScrollTrigger);
 
-section.forEach((box) => {
+gsap.to("#moving-circle", {
+    scrollTrigger: {
+        trigger: ".timeline-section",
+        start: "top center", 
+        end: "bottom center",
+        scrub: true,
+    },
+    attr: { cy: 1000 },
+    ease: "none",
+});
+
+
+
+const sectionanim = gsap.utils.toArray('.fade-in');
+sectionanim.forEach((box) => {
   gsap.fromTo(box, 
-    { autoAlpha: 0 }, 
+    { autoAlpha: 0,y:30 }, 
     { 
       duration: 1, 
-      autoAlpha: 1,  
+      y:0,
+      autoAlpha: 1,
       scrollTrigger: {
         trigger: box,
         start: 'top 80%',  
@@ -81,6 +95,84 @@ section.forEach((box) => {
   );
 });
 
+const fade_lef_tanim = gsap.utils.toArray('.fade-left');
+fade_lef_tanim.forEach((slide) => {
+  gsap.fromTo(slide, 
+    { autoAlpha: 0,x:30 }, 
+    { 
+      duration: 1, 
+      x:0,
+      autoAlpha: 1,  
+      scrollTrigger: {
+        trigger: slide,
+        start: 'top 80%',  
+        end: 'top 50%',    
+        toggleActions: 'play none none none',
+      }
+    }
+  );
+})
+
+const fade_right_anim = gsap.utils.toArray('.fade-right');
+fade_right_anim.forEach((slide) => {
+  gsap.fromTo(slide, 
+    { autoAlpha: 0,x:-30 }, 
+    { 
+      duration: 1, 
+      x:0,
+      autoAlpha: 1,  
+      scrollTrigger: {
+        trigger: slide,
+        start: 'top 80%',  
+        end: 'top 50%',    
+        toggleActions: 'play none none none',
+      }
+    }
+  );
+})
+
+const search_icon = document.querySelector('.icon-search');
+const seach_section = document.querySelector('.search')
+const close_search = document.querySelector('.close-search')
+
+const search_timeline = gsap.timeline()
+
+search_timeline.to(seach_section, {
+  top: 0,
+  duration: 0.3,
+});
+search_timeline.pause();
+
+search_icon.addEventListener("click", function () {
+  search_timeline.play();
+});
+
+close_search.addEventListener("click", function () {
+  search_timeline.reverse();
+});
+
+
+
+const experience_img = document.querySelector('.experience-img');
+
+gsap.from(experience_img, {
+  rotate: 4,
+  duration: 3,
+  repeat: -1,
+  yoyo: true,
+  ease: "sine.inOut" 
+});
+
+
+
+gsap.to(".first-circle,.second-circle,.third-circle",{
+  opacity:0.4,
+  duration:0.4,
+  repeat:-1,
+  yoyo:true,
+  ease:"sine.inOut",
+  stagger:0.4
+})
 
 jQuery(document).ready(function ($) {
   if ($(window).scrollTop() >= 70) {
@@ -95,6 +187,42 @@ jQuery(document).ready(function ($) {
       $(".header").removeClass("is-sticky");
       $(".header-pattern").removeClass("hidden");
     }
+  });
+
+
+  $('.accordion-content').hide();
+  $('.accordion-header').addClass('rounded-b-[14px]');
+  $('.accordion-header svg').css({ transform: 'rotate(0deg)' });
+
+  // Accordion toggle logic
+  $('.accordion-header').on('click', function () {
+    var currentContent = $(this).next('.accordion-content');
+    var currentArrow = $(this).find('svg');
+    var currentHeader = $(this);
+
+    // Close all other accordion contents
+    $('.accordion-content').not(currentContent).slideUp(function () {
+      $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
+    });
+    $('.accordion-header').not(this).find('svg').css({ transform: 'rotate(0deg)' });
+
+    // Toggle the current accordion
+    if (currentContent.is(':visible')) {
+      currentContent.slideUp(function () {
+        currentHeader.addClass('rounded-b-[14px]');
+      });
+      currentArrow.css({ transform: 'rotate(0deg)' });
+    } else {
+      currentContent.slideDown();
+      currentHeader.removeClass('rounded-b-[14px]');
+      currentArrow.css({ transform: 'rotate(180deg)' });
+    }
+  });
+
+  $('[data-fancybox="gallery"]').fancybox({
+    // Optional settings
+    loop: true, // Loop through images
+    buttons: ['zoom', 'slideShow', 'fullScreen', 'close'], // Buttons in the Fancybox toolbar
   });
 });
 
@@ -136,10 +264,13 @@ playButton.addEventListener("click", () => {
     video.play();
     playIcon.src = "../assets/images/svg/pause-btn.svg";
     videoSection.classList.add("playing");
+
   } else {
     video.pause();
     playIcon.src = "../assets/images/svg/play-btn.svg";
     videoSection.classList.remove("playing");
+    console.log("playing");
+    
   }
 });
 
@@ -156,3 +287,4 @@ playButton.addEventListener("click", () => {
 
 
 // Register GSAP ScrollTrigger plugin globally once
+// JavaScript to animate circle based on scroll position
