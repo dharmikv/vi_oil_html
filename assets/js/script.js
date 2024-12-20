@@ -192,32 +192,32 @@ jQuery(document).ready(function ($) {
 
   $('.accordion-content').hide();
   $('.accordion-header').addClass('rounded-b-[14px]');
-  $('.accordion-header svg').css({ transform: 'rotate(0deg)' });
+  $('.accordion-header img').attr('src', '../assets/images/svg/faq-plus.svg');
 
-  // Accordion toggle logic
   $('.accordion-header').on('click', function () {
-    var currentContent = $(this).next('.accordion-content');
-    var currentArrow = $(this).find('svg');
-    var currentHeader = $(this);
+      var currentContent = $(this).next('.accordion-content');
+      var currentIcon = $(this).find('img');
+      var currentHeader = $(this);
 
-    // Close all other accordion contents
-    $('.accordion-content').not(currentContent).slideUp(function () {
-      $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
-    });
-    $('.accordion-header').not(this).find('svg').css({ transform: 'rotate(0deg)' });
-
-    // Toggle the current accordion
-    if (currentContent.is(':visible')) {
-      currentContent.slideUp(function () {
-        currentHeader.addClass('rounded-b-[14px]');
+      // Close other accordions
+      $('.accordion-content').not(currentContent).slideUp(function () {
+          $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
       });
-      currentArrow.css({ transform: 'rotate(0deg)' });
-    } else {
-      currentContent.slideDown();
-      currentHeader.removeClass('rounded-b-[14px]');
-      currentArrow.css({ transform: 'rotate(180deg)' });
-    }
+      $('.accordion-header').not(currentHeader).find('img').attr('src', '../assets/images/svg/faq-plus.svg');
+
+      // Toggle current accordion
+      if (currentContent.is(':visible')) {
+          currentContent.slideUp(function () {
+              currentHeader.addClass('rounded-b-[14px]');
+          });
+          currentIcon.attr('src', '../assets/images/svg/faq-plus.svg');
+      } else {
+          currentContent.slideDown();
+          currentHeader.removeClass('rounded-b-[14px]');
+          currentIcon.attr('src', '../assets/images/svg/faq-minus.svg');
+      }
   });
+
 
   $('[data-fancybox="gallery"]').fancybox({
     // Optional settings

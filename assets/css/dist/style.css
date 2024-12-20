@@ -1566,10 +1566,6 @@ footer{
   right: -100%;
 }
 
-.-top-0{
-  top: -0px;
-}
-
 .-top-\[1px\]{
   top: -1px;
 }
@@ -1580,6 +1576,10 @@ footer{
 
 .-top-\[60px\]{
   top: -60px;
+}
+
+.-top-full{
+  top: -100%;
 }
 
 .bottom-0{
@@ -1610,12 +1610,20 @@ footer{
   right: 20px;
 }
 
+.right-30{
+  right: 30px;
+}
+
 .right-\[18\%\]{
   right: 18%;
 }
 
 .top-0{
   top: 0px;
+}
+
+.top-30{
+  top: 30px;
 }
 
 .top-50per{
@@ -1632,18 +1640,6 @@ footer{
 
 .top-full{
   top: 100%;
-}
-
-.right-30{
-  right: 30px;
-}
-
-.top-30{
-  top: 30px;
-}
-
-.-top-full{
-  top: -100%;
 }
 
 .-z-\[1\]{
@@ -1782,10 +1778,6 @@ footer{
 
 .mt-\[-5\%\]{
   margin-top: -5%;
-}
-
-.block{
-  display: block;
 }
 
 .flex{
@@ -2320,6 +2312,18 @@ footer{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-White\/10{
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-White\/15{
+  background-color: rgb(255 255 255 / 0.15);
+}
+
+.bg-White\/5{
+  background-color: rgb(255 255 255 / 0.05);
+}
+
 .bg-brown{
   --tw-bg-opacity: 1;
   background-color: rgb(82 50 10 / var(--tw-bg-opacity, 1));
@@ -2338,18 +2342,6 @@ footer{
 .bg-yellow{
   --tw-bg-opacity: 1;
   background-color: rgb(248 195 44 / var(--tw-bg-opacity, 1));
-}
-
-.bg-White\/15{
-  background-color: rgb(255 255 255 / 0.15);
-}
-
-.bg-White\/5{
-  background-color: rgb(255 255 255 / 0.05);
-}
-
-.bg-White\/10{
-  background-color: rgb(255 255 255 / 0.1);
 }
 
 .bg-faq-linear{
