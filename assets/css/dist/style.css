@@ -1692,6 +1692,11 @@ footer{
   margin-right: auto;
 }
 
+.my-60{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 .-ml-\[30\%\]{
   margin-left: -30%;
 }
