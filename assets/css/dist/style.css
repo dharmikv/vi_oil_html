@@ -3515,6 +3515,18 @@ footer .nav-logo{
     left: 120px;
   }
 
+  .lgscreen\:top-\[103px\]{
+    top: 103px;
+  }
+
+  .lgscreen\:top-\[100px\]{
+    top: 100px;
+  }
+
+  .lgscreen\:top-\[95px\]{
+    top: 95px;
+  }
+
   .lgscreen\:order-3{
     order: 3;
   }
@@ -3553,6 +3565,18 @@ footer .nav-logo{
 
   .lgscreen\:h-\[80px\]{
     height: 80px;
+  }
+
+  .lgscreen\:h-\[calc\(100vh-103px\)\]{
+    height: calc(100vh - 103px);
+  }
+
+  .lgscreen\:h-\[calc\(100vh-100px\)\]{
+    height: calc(100vh - 100px);
+  }
+
+  .lgscreen\:h-\[calc\(100vh-95px\)\]{
+    height: calc(100vh - 95px);
   }
 
   .lgscreen\:w-\[300px\]{
