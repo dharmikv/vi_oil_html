@@ -62,12 +62,12 @@
                                             alt="search icon">
                                     </div>
                                 </div>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
-                                            alt="cart icon">
-                                    </div>
-                                </a>
+                               <div class="icon-cart cursor-pointer">
+                                <div class="icon">
+                                    <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
+                                        alt="cart icon">
+                                </div>
+                               </div>
                                 <a href="#popup-content" data-fancybox="user-popup">
                                     <div class="icon">
                                         <img src="../assets/images/svg/user-icon.svg" class="w-[18px] h-[18px]" alt="user icon">
@@ -78,7 +78,7 @@
                     </div>
                 </nav>
             </div>
-            <div class="w-full absolute top-full header-pattern">
+            <div class="w-full absolute top-full header-pattern z-99">
                 <img src="../assets/images/svg/shape-layer-1.svg" class="w-full h-[16px] object-cover head-layer"
                     alt="header layer">
             </div>
@@ -94,7 +94,13 @@
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
-
+    <div class="cart-drawer h-[calc(100vh-110px)] fixed top-[110px] -right-full w-full max-w-[469px]  z-[98] bg-White rounded-tl-20 rounded-bl-20 py-30 px-20">
+        <div class="flex justify-end w-full">
+           <div class="w-fit flex justify-end p-[14px] bg-green-200 rounded-100per cursor-pointer close-cart-drawer">
+               <img src="../assets/images/svg/close-yellow.svg" class="w-[14px] h-[14px]" alt="">
+          </div>
+        </div>
+    </div>
     <!-- ========================================================== SIDEBAR ========================================================== -->
 
     <aside class="h-screen sidebar fixed top-0 -right-full backdrop-blur-[35px] w-full hidden mdscreen:flex z-[999]">
