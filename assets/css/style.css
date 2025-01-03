@@ -563,17 +563,21 @@
 
   /* ========================================================== FORM SECTION ========================================================== */
   
-  .custom-check {
+  .custom-check,
+  .form-checkbox .wpcf7-list-item input {
     @apply relative pl-[36px];
   }
-  .custom-check::before {
+  .custom-check::before,
+  .form-checkbox .wpcf7-list-item::before {
     @apply content-[""] absolute top-0 left-0 w-[24px] h-[24px] bg-yellow rounded-100per cursor-pointer;
   }
-  .custom-check::after {
+  .custom-check::after,
+  .form-checkbox .wpcf7-list-item::after {
     @apply content-[""] absolute top-[7px] left-[5px] bg-[url('../../images/svg/check-tick.svg')] w-[14px] h-[10px] bg-contain bg-no-repeat opacity-0 cursor-pointer transition-all ease-out duration-300;
   }
 
-  .custom-checkbox:checked + .custom-check::after {
+  .custom-checkbox:checked + .custom-check::after,
+  .form-checkbox .wpcf7-list-item:checked + .form-checkbox .wpcf7-list-item::after{
     @apply opacity-1 transition-all ease-out duration-300;
   }
 
@@ -735,10 +739,23 @@
     .fancybox-button{
       @apply !bg-transparent
     }
-    .contact-detail{
+    /* .contact-detail{
       @apply pt-20 pb-20 border-b-1 border-b-lightgray
     }
     .contact-detail:last-child{
       @apply border-b-0
+    } */
+     .contact-page-form{
+      @apply bg-green-200 rounded-20
+     }
+
+     .error-page-section{
+      @apply relative
+     }
+     .error-page-section::before {
+      @apply content-[""] absolute top-0 right-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-top mdscreen:w-[80%] smscreen:w-[60%] xsscreen:w-[35%];
+    }
+    .error-page-section::after {
+      @apply content-[""] absolute bottom-0 left-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-bottom mdscreen:w-[80%] smscreen:w-[60%] xsscreen:w-[35%];
     }
 }

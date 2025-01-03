@@ -1630,6 +1630,10 @@ footer{
   top: 50%;
 }
 
+.top-\[110px\]{
+  top: 110px;
+}
+
 .top-\[20\%\]{
   top: 20%;
 }
@@ -1640,18 +1644,6 @@ footer{
 
 .top-full{
   top: 100%;
-}
-
-.top-\[121px\]{
-  top: 121px;
-}
-
-.top-\[115px\]{
-  top: 115px;
-}
-
-.top-\[110px\]{
-  top: 110px;
 }
 
 .-z-\[1\]{
@@ -1678,8 +1670,12 @@ footer{
   z-index: 40;
 }
 
-.z-\[30\]{
-  z-index: 30;
+.z-99{
+  z-index: 99;
+}
+
+.z-\[98\]{
+  z-index: 98;
 }
 
 .z-\[9999\]{
@@ -1692,14 +1688,6 @@ footer{
 
 .z-\[99\]{
   z-index: 99;
-}
-
-.z-99{
-  z-index: 99;
-}
-
-.z-\[98\]{
-  z-index: 98;
 }
 
 .col-span-2{
@@ -1828,6 +1816,10 @@ footer{
   height: 100px;
 }
 
+.h-\[14px\]{
+  height: 14px;
+}
+
 .h-\[16px\]{
   height: 16px;
 }
@@ -1852,6 +1844,10 @@ footer{
   height: 448px;
 }
 
+.h-\[646px\]{
+  height: 646px;
+}
+
 .h-\[660px\]{
   height: 660px;
 }
@@ -1864,8 +1860,8 @@ footer{
   height: 71px;
 }
 
-.h-\[calc\(100vh-121px\)\]{
-  height: calc(100vh - 121px);
+.h-\[calc\(100vh-110px\)\]{
+  height: calc(100vh - 110px);
 }
 
 .h-auto{
@@ -1878,14 +1874,6 @@ footer{
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[calc\(100vh-110px\)\]{
-  height: calc(100vh - 110px);
-}
-
-.h-\[14px\]{
-  height: 14px;
 }
 
 .max-h-\[100px\]{
@@ -1920,6 +1908,10 @@ footer{
   width: 100px;
 }
 
+.w-\[14px\]{
+  width: 14px;
+}
+
 .w-\[18px\]{
   width: 18px;
 }
@@ -1951,10 +1943,6 @@ footer{
 
 .w-full{
   width: 100%;
-}
-
-.w-\[14px\]{
-  width: 14px;
 }
 
 .max-w-\[130px\]{
@@ -2001,6 +1989,10 @@ footer{
   max-width: 420px;
 }
 
+.max-w-\[469px\]{
+  max-width: 469px;
+}
+
 .max-w-\[545px\]{
   max-width: 545px;
 }
@@ -2045,8 +2037,12 @@ footer{
   max-width: 990px;
 }
 
-.max-w-\[469px\]{
-  max-width: 469px;
+.max-w-\[790px\]{
+  max-width: 790px;
+}
+
+.max-w-\[225px\]{
+  max-width: 225px;
 }
 
 .flex-shrink-0{
@@ -2219,6 +2215,10 @@ footer{
   gap: 20px;
 }
 
+.gap-\[30px\]{
+  gap: 30px;
+}
+
 .gap-\[3px\]{
   gap: 3px;
 }
@@ -2289,20 +2289,20 @@ footer{
   border-top-right-radius: 14px;
 }
 
-.rounded-br-30{
-  border-bottom-right-radius: 30px;
+.rounded-bl-20{
+  border-bottom-left-radius: 20px;
 }
 
-.rounded-tr-30{
-  border-top-right-radius: 30px;
+.rounded-br-30{
+  border-bottom-right-radius: 30px;
 }
 
 .rounded-tl-20{
   border-top-left-radius: 20px;
 }
 
-.rounded-bl-20{
-  border-bottom-left-radius: 20px;
+.rounded-tr-30{
+  border-top-right-radius: 30px;
 }
 
 .border-1{
@@ -2315,10 +2315,6 @@ footer{
 
 .border-b-1{
   border-bottom-width: 1px;
-}
-
-.border-r-1{
-  border-right-width: 1px;
 }
 
 .border-t-1{
@@ -2345,11 +2341,6 @@ footer{
 
 .border-b-White\/\[0\.33\]{
   border-bottom-color: rgb(255 255 255 / 0.33);
-}
-
-.border-r-lightgray{
-  --tw-border-opacity: 1;
-  border-right-color: rgb(238 238 238 / var(--tw-border-opacity, 1));
 }
 
 .border-t-White\/\[0\.33\]{
@@ -2449,6 +2440,10 @@ footer{
   padding: 14px;
 }
 
+.p-\[44px\]{
+  padding: 44px;
+}
+
 .px-0{
   padding-left: 0px;
   padding-right: 0px;
@@ -2528,6 +2523,10 @@ footer{
 
 .pb-60{
   padding-bottom: 60px;
+}
+
+.pb-\[120px\]{
+  padding-bottom: 120px;
 }
 
 .pb-\[336px\]{
@@ -3023,12 +3022,14 @@ footer .nav-logo{
 
 /* ========================================================== FORM SECTION ========================================================== */
 
-.custom-check{
+.custom-check,
+  .form-checkbox .wpcf7-list-item input{
   position: relative;
   padding-left: 36px;
 }
 
-.custom-check::before{
+.custom-check::before,
+  .form-checkbox .wpcf7-list-item::before{
   position: absolute;
   top: 0px;
   left: 0px;
@@ -3042,7 +3043,8 @@ footer .nav-logo{
   content: var(--tw-content);
 }
 
-.custom-check::after{
+.custom-check::after,
+  .form-checkbox .wpcf7-list-item::after{
   position: absolute;
   top: 7px;
   left: 5px;
@@ -3061,7 +3063,8 @@ footer .nav-logo{
   content: var(--tw-content);
 }
 
-.custom-checkbox:checked + .custom-check::after{
+.custom-checkbox:checked + .custom-check::after,
+  .form-checkbox .wpcf7-list-item:checked + .form-checkbox .wpcf7-list-item::after{
   opacity: 100%;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3377,16 +3380,17 @@ footer .nav-logo{
   content: var(--tw-content);
 }
 
-.contact-detail{
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(238 238 238 / var(--tw-border-opacity, 1));
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
+/* .contact-detail{
+      @apply pt-20 pb-20 border-b-1 border-b-lightgray
+    }
+    .contact-detail:last-child{
+      @apply border-b-0
+    } */
 
-.contact-detail:last-child{
-  border-bottom-width: 0px;
+.contact-page-form{
+  border-radius: 20px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 64 28 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:opacity-100:hover{
@@ -3515,14 +3519,6 @@ footer .nav-logo{
     left: 120px;
   }
 
-  .lgscreen\:top-\[103px\]{
-    top: 103px;
-  }
-
-  .lgscreen\:top-\[100px\]{
-    top: 100px;
-  }
-
   .lgscreen\:top-\[95px\]{
     top: 95px;
   }
@@ -3565,14 +3561,6 @@ footer .nav-logo{
 
   .lgscreen\:h-\[80px\]{
     height: 80px;
-  }
-
-  .lgscreen\:h-\[calc\(100vh-103px\)\]{
-    height: calc(100vh - 103px);
-  }
-
-  .lgscreen\:h-\[calc\(100vh-100px\)\]{
-    height: calc(100vh - 100px);
   }
 
   .lgscreen\:h-\[calc\(100vh-95px\)\]{
@@ -3654,6 +3642,10 @@ footer .nav-logo{
     gap: 10px;
   }
 
+  .lgscreen\:gap-\[40px\]{
+    gap: 40px;
+  }
+
   .lgscreen\:object-center{
     -o-object-position: center;
        object-position: center;
@@ -3673,8 +3665,16 @@ footer .nav-logo{
     padding-bottom: 300px;
   }
 
+  .lgscreen\:pb-\[80px\]{
+    padding-bottom: 80px;
+  }
+
   .lgscreen\:pt-0{
     padding-top: 0px;
+  }
+
+  .lgscreen\:pt-60{
+    padding-top: 60px;
   }
 
   .lgscreen\:pt-70{
@@ -3868,6 +3868,10 @@ footer .nav-logo{
     row-gap: 20px;
   }
 
+  .mdscreen\:p-\[20px\]{
+    padding: 20px;
+  }
+
   .mdscreen\:px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -3912,6 +3916,10 @@ footer .nav-logo{
 
   .mdscreen\:pb-\[285px\]{
     padding-bottom: 285px;
+  }
+
+  .mdscreen\:pb-\[60px\]{
+    padding-bottom: 60px;
   }
 
   .mdscreen\:pt-0{
@@ -3972,6 +3980,10 @@ footer .nav-logo{
 
   .smscreen\:w-\[70px\]{
     width: 70px;
+  }
+
+  .smscreen\:max-w-\[115px\]{
+    max-width: 115px;
   }
 
   .smscreen\:grid-cols-1{

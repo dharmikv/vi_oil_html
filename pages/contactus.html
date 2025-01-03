@@ -60,23 +60,23 @@
                                             alt="search icon">
                                     </div>
                                 </div>
-                                <a href="#">
-                                    <div class="icon">
-                                        <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
-                                            alt="cart icon">
-                                    </div>
-                                </a>
+                               <div class="icon-cart cursor-pointer">
+                                <div class="icon">
+                                    <img src="../assets/images/svg/cart-icon.svg" class="w-[18px] h-[18px]"
+                                        alt="cart icon">
+                                </div>
+                               </div>
                                 <a href="#popup-content" data-fancybox="user-popup">
                                     <div class="icon">
                                         <img src="../assets/images/svg/user-icon.svg" class="w-[18px] h-[18px]" alt="user icon">
                                     </div>
-                                </a>
+                                </a>    
                             </div>
                         </div>
                     </div>
                 </nav>
             </div>
-            <div class="w-full absolute top-full header-pattern">
+            <div class="w-full absolute top-full header-pattern z-99">
                 <img src="../assets/images/svg/shape-layer-1.svg" class="w-full h-[16px] object-cover head-layer"
                     alt="header layer">
             </div>
@@ -92,7 +92,13 @@
             <li><a href="#">Logout</a></li>
         </ul>
     </div>
-
+    <div class="cart-drawer h-[calc(100vh-110px)] lgscreen:h-[calc(100vh-95px)] fixed top-[110px] lgscreen:top-[95px] -right-full w-full max-w-[469px] z-[98] bg-White rounded-tl-20 rounded-bl-20 py-30 px-20 mdscreen:hidden">
+        <div class="flex justify-end w-full">
+           <div class="w-fit flex justify-end p-[14px] bg-green-200 rounded-100per cursor-pointer close-cart-drawer">
+               <img src="../assets/images/svg/close-yellow.svg" class="w-[14px] h-[14px]" alt="">
+          </div>
+        </div>
+    </div>
     <!-- ========================================================== SIDEBAR ========================================================== -->
 
     <aside class="h-screen sidebar fixed top-0 -right-full backdrop-blur-[35px] w-full hidden mdscreen:flex z-[999]">
@@ -131,6 +137,7 @@
       </div>
     </div>
 
+
     <main>
          <!-- ========================================================== BANNER ========================================================== -->
         
@@ -167,11 +174,12 @@
 
          <!-- ========================================================== CONTACT DETAIL ========================================================== -->
 
-        <section class="contact-section py-60 mdscreen:py-40 w-full bg-White fade-in">
+        <section class="contact-section pt-100 lgscreen:pt-60 mdscreen:pt-40 w-full bg-White fade-in">
             <div class="container-fluid">
-                <div class="zigzag-content w-full flex lgscreen:flex-col gap-[20px]">
+               <div class="p-[44px] bg-semiwhite rounded-20 mdscreen:p-[20px]">
+                    <div class="zigzag-content w-full flex lgscreen:flex-col gap-[20px] lgscreen:gap-[40px]">
                         <div class="left-side w-6/12 lgscreen:w-full">
-                            <div class="px-20 lgscreen:px-0 grid grid-cols-1 lgscreen:grid-cols-2 smscreen:grid-cols-1 gap-[20px] border-r-1 border-r-lightgray">
+                            <div class="px-20 lgscreen:px-0 grid grid-cols-1 lgscreen:grid-cols-2 smscreen:grid-cols-1 gap-[30px]">
                                 <div class="flex items-center gap-[20px] contact-detail">
                                     <div class="w-[100px] h-[100px] lgscreen:w-[80px] lgscreen:h-[80px] smscreen:w-[70px] smscreen:h-[70px] 576screen:w-[60px] 576screen:h-[60px] flex-shrink-0 bg-green-200 flex items-center justify-center rounded-100per">
                                         <img src="../assets/images/svg/contact-email-icon.svg" alt="">
@@ -227,17 +235,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-side w-6/12 mdscreen:w-full flex items-center justify-center">
-                        Form will be here
+                        <div class="right-side w-6/12 lgscreen:w-full flex items-center justify-center">
+                            <div class="w-full h-[646px] contact-page-form">
+
+                            </div>
                         </div>
-                </div>
+                    </div>
+               </div>
             </div>
         </section>
+
+         <!-- ========================================================== Map ========================================================== -->
+
+         <section class="map-section pt-100 lgscreen:pt-60 mdscreen:pt-40 pb-[120px] lgscreen:pb-[80px] mdscreen:pb-[60px]">
+           <div class="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.68689155378!2d70.73889544011061!3d22.273625026505325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1735889415654!5m2!1sen!2sin" height="578" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full rounded-20"></iframe>
+           </div>
+         </section>
+
     </main>
 
     <!-- ========================================================== FOOTER ========================================================== -->
 
-    <footer class="footer fade-in">
+    <footer class="footer">
+       <div class="w-full fade-in">
         <div class="absolute left-0 w-full -translate-y-[87%] z-40">
             <img src="../assets/images/svg/footer-grass.svg" class="w-full h-[23px] object-cover" alt="grass img">
         </div>
@@ -427,6 +448,7 @@
                 </div>
             </div>
         </div>
+       </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
