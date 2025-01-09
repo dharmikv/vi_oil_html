@@ -758,4 +758,18 @@
     .error-page-section::after {
       @apply content-[""] absolute bottom-0 left-0 w-full h-full bg-[url('../../images/svg/ground-nut-product.svg')] bg-contain bg-no-repeat xl:max-w-[358px] xl:max-h-[155px] max-w-[225px] max-h-[155px] bg-bottom mdscreen:w-[80%] smscreen:w-[60%] xsscreen:w-[35%];
     }
+
+
+    .search-result{
+      @apply bg-green-200 rounded-20 p-30 mdscreen:p-20
+    }
+    .search-img-wrapper{
+      @apply relative pt-[300px]
+    }
+    .search-img-wrapper img{
+      @apply absolute top-0 left-0 w-full h-full object-cover rounded-10
+    }
+    .search-detail{
+      @apply py-20
+    }
 }

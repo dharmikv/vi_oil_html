@@ -1957,6 +1957,10 @@ footer{
   max-width: 192px;
 }
 
+.max-w-\[225px\]{
+  max-width: 225px;
+}
+
 .max-w-\[238px\]{
   max-width: 238px;
 }
@@ -2017,6 +2021,10 @@ footer{
   max-width: 746px;
 }
 
+.max-w-\[790px\]{
+  max-width: 790px;
+}
+
 .max-w-\[80\%\]{
   max-width: 80%;
 }
@@ -2035,14 +2043,6 @@ footer{
 
 .max-w-\[990px\]{
   max-width: 990px;
-}
-
-.max-w-\[790px\]{
-  max-width: 790px;
-}
-
-.max-w-\[225px\]{
-  max-width: 225px;
 }
 
 .flex-shrink-0{
@@ -3391,6 +3391,40 @@ footer .nav-logo{
   border-radius: 20px;
   --tw-bg-opacity: 1;
   background-color: rgb(13 64 28 / var(--tw-bg-opacity, 1));
+}
+
+.search-result{
+  border-radius: 20px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 64 28 / var(--tw-bg-opacity, 1));
+  padding: 30px;
+}
+
+@media (max-width: 768px){
+  .search-result{
+    padding: 20px;
+  }
+}
+
+.search-img-wrapper{
+  position: relative;
+  padding-top: 300px;
+}
+
+.search-img-wrapper img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.search-detail{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .hover\:opacity-100:hover{
