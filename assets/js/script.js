@@ -243,33 +243,41 @@ jQuery(document).ready(function ($) {
   });
 
 
-  $('.accordion-content').hide();
-  $('.accordion-header').addClass('rounded-b-[14px]');
-  $('.accordion-header img').attr('src', '../assets/images/svg/faq-plus.svg');
+  // Hide all accordion contents initially
+$('.accordion-content').hide();
+$('.accordion-header').addClass('rounded-b-[14px]');
+$('.accordion-header img').attr('src', '../assets/images/svg/faq-plus.svg');
 
-  $('.accordion-header').on('click', function () {
-      var currentContent = $(this).next('.accordion-content');
-      var currentIcon = $(this).find('img');
-      var currentHeader = $(this);
+// Open the first accordion by default
+$('.accordion-content').first().show();
+$('.accordion-header').first().removeClass('rounded-b-[14px]');
+$('.accordion-header').first().find('img').attr('src', '../assets/images/svg/faq-minus.svg');
 
-      // Close other accordions
-      $('.accordion-content').not(currentContent).slideUp(function () {
-          $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
-      });
-      $('.accordion-header').not(currentHeader).find('img').attr('src', '../assets/images/svg/faq-plus.svg');
+// Accordion toggle functionality
+$('.accordion-header').on('click', function () {
+    var currentContent = $(this).next('.accordion-content');
+    var currentIcon = $(this).find('img');
+    var currentHeader = $(this);
 
-      // Toggle current accordion
-      if (currentContent.is(':visible')) {
-          currentContent.slideUp(function () {
-              currentHeader.addClass('rounded-b-[14px]');
-          });
-          currentIcon.attr('src', '../assets/images/svg/faq-plus.svg');
-      } else {
-          currentContent.slideDown();
-          currentHeader.removeClass('rounded-b-[14px]');
-          currentIcon.attr('src', '../assets/images/svg/faq-minus.svg');
-      }
-  });
+    // Close other accordions
+    $('.accordion-content').not(currentContent).slideUp(function () {
+        $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
+    });
+    $('.accordion-header').not(currentHeader).find('img').attr('src', '../assets/images/svg/faq-plus.svg');
+
+    // Toggle current accordion
+    if (currentContent.is(':visible')) {
+        currentContent.slideUp(function () {
+            currentHeader.addClass('rounded-b-[14px]');
+        });
+        currentIcon.attr('src', '../assets/images/svg/faq-plus.svg');
+    } else {
+        currentContent.slideDown();
+        currentHeader.removeClass('rounded-b-[14px]');
+        currentIcon.attr('src', '../assets/images/svg/faq-minus.svg');
+    }
+});
+
 
 
   $('[data-fancybox="gallery"]').fancybox({
