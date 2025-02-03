@@ -64,15 +64,38 @@ var swiper = new Swiper(".timeline-swiper", {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#moving-circle", {
-    scrollTrigger: {
-        trigger: ".timeline-section",
-        start: "top center", 
-        end: "bottom center",
-        scrub: true,
-    },
-    attr: { cy: 1000 },
-    ease: "none",
+  scrollTrigger: {
+      trigger: ".timeline-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      onUpdate: self => {
+          const movingCircle = document.querySelector("#moving-circle");
+          const movingCircleRect = movingCircle.getBoundingClientRect();
+
+          document.querySelectorAll(".year-info").forEach(yearInfo => {
+              const yearInfoRect = yearInfo.getBoundingClientRect();
+              
+              // Check overlap between moving circle and year info
+              const isOverlapping = !(
+                  movingCircleRect.bottom < yearInfoRect.top ||
+                  movingCircleRect.top > yearInfoRect.bottom ||
+                  movingCircleRect.right < yearInfoRect.left ||
+                  movingCircleRect.left > yearInfoRect.right
+              );
+
+              if (isOverlapping) {
+                  yearInfo.classList.add("active");
+              } else {
+                  yearInfo.classList.remove("active");
+              }
+          });
+      }
+  },
+  attr: { cy: "100%" }, // Use percentage if needed, or calculate px-based values
+  ease: "none",
 });
+
 
 
 
@@ -244,14 +267,20 @@ jQuery(document).ready(function ($) {
 
 
   // Hide all accordion contents initially
+// Initially hide all accordion content
 $('.accordion-content').hide();
 $('.accordion-header').addClass('rounded-b-[14px]');
 $('.accordion-header img').attr('src', '../assets/images/svg/faq-plus.svg');
 
-// Open the first accordion by default
-$('.accordion-content').first().show();
-$('.accordion-header').first().removeClass('rounded-b-[14px]');
-$('.accordion-header').first().find('img').attr('src', '../assets/images/svg/faq-minus.svg');
+// Open the first accordion of each faq-main by default
+$('.faq-main').each(function () {
+    var firstAccordionHeader = $(this).find('.accordion-header').first();
+    var firstAccordionContent = $(this).find('.accordion-content').first();
+
+    firstAccordionContent.show();
+    firstAccordionHeader.removeClass('rounded-b-[14px]');
+    firstAccordionHeader.find('img').attr('src', '../assets/images/svg/faq-minus.svg');
+});
 
 // Accordion toggle functionality
 $('.accordion-header').on('click', function () {
@@ -259,13 +288,13 @@ $('.accordion-header').on('click', function () {
     var currentIcon = $(this).find('img');
     var currentHeader = $(this);
 
-    // Close other accordions
-    $('.accordion-content').not(currentContent).slideUp(function () {
+    // Close other accordions within the same faq-main
+    $(this).closest('.faq-main').find('.accordion-content').not(currentContent).slideUp(function () {
         $(this).prev('.accordion-header').addClass('rounded-b-[14px]');
     });
-    $('.accordion-header').not(currentHeader).find('img').attr('src', '../assets/images/svg/faq-plus.svg');
+    $(this).closest('.faq-main').find('.accordion-header').not(currentHeader).find('img').attr('src', '../assets/images/svg/faq-plus.svg');
 
-    // Toggle current accordion
+    // Toggle the current accordion
     if (currentContent.is(':visible')) {
         currentContent.slideUp(function () {
             currentHeader.addClass('rounded-b-[14px]');
@@ -277,6 +306,7 @@ $('.accordion-header').on('click', function () {
         currentIcon.attr('src', '../assets/images/svg/faq-minus.svg');
     }
 });
+
 
 
 

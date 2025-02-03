@@ -201,7 +201,7 @@
             </div>
             <div class="container-fluid">
                 <div class="max-w-[990px] -translate-y-[89%] mdscreen:translate-y-0 mx-auto">
-                    <div class="swiper timeline-swiper">
+                    <div class="swiper timeline-swiper mdscreen:max-w-[555px] lgscreen:max-w-[720px]">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="flex justify-center">
@@ -283,16 +283,32 @@
             </div>
             <div class="container-fluid relative pb-60 mdscreen:pt-40">
                 <div class="absolute w-fit h-full -top-[60px] left-50per mdscreen:hidden">
-                    <svg width="13" viewBox="0 0 13 1000" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
-                        <line x1="6.5" y1="0" x2="6.49987" y2="1000" stroke="black" stroke-opacity="0.33" stroke-dasharray="5 5" />
-                        <g class="translating-line-circle">
-                            <circle id="moving-circle" cx="6.5" cy="6.5" r="6.5" fill="#52320A" />
-                        </g>
-                    </svg>
+                    <div style="height: 100%; width: 13px;">
+                        <svg
+                            width="13"
+                            height="100%"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="stretch-svg"
+                        >
+                            <line
+                                x1="6.5"
+                                y1="0"
+                                x2="6.5"
+                                y2="100%"
+                                stroke="black"
+                                stroke-opacity="0.33"
+                                stroke-dasharray="5 5"
+                            ></line>
+                
+                            <g class="translating-line-circle">
+                                <circle id="moving-circle" cx="6.5" cy="0" r="6.5" fill="#52320A"></circle>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
                 <div class="zigzag-content flex items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col relative">
                     <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%] z-20 fade-in">
-                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold">
+                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold year-info">
                             <p>2021</p>
                         </div>
                     </div>
@@ -312,7 +328,47 @@
                 </div>
                  <div class="zigzag-content flex flex-row-reverse items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col mt-40 relative">
                     <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%] z-20 fade-in">
-                        <div class="content content-brown bg-yellow w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold">
+                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold year-info">
+                            <p>2022</p>
+                        </div>
+                    </div>
+                    <div class="left-side w-6/12 mdscreen:w-full flex justify-center lg:justify-end 3xl:justify-center 1920:justify-center fade-in">
+                        <div class="w-[420px] h-[420px] lgscreen:w-[300px] lgscreen:h-[300px] xsscreen:w-[200px] xsscreen:h-[200px] rounded-100per">
+                            <img src="../assets/images/png/about-timeline.png" class="w-full h-full object-cover rounded-100per" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side w-6/12 mdscreen:w-full max-w-[420px] mdscreen:max-w-[unset] fade-in">
+                        <div class="title title-secondary title-green-regular">
+                          <h5>Title 1</h5>
+                        </div>
+                        <div class="content content-gray mt-10">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="zigzag-content flex items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col relative">
+                    <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%] z-20 fade-in">
+                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold year-info">
+                            <p>2021</p>
+                        </div>
+                    </div>
+                    <div class="left-side w-6/12 mdscreen:w-full flex justify-center lg:justify-normal 3xl:justify-center 1920:justify-center fade-in">
+                        <div class="w-[420px] h-[420px] lgscreen:w-[300px] lgscreen:h-[300px] xsscreen:w-[200px] xsscreen:h-[200px] rounded-100per">
+                            <img src="../assets/images/png/about-timeline.png" class="w-full h-full object-cover rounded-100per" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side w-6/12 mdscreen:w-full max-w-[420px] mdscreen:max-w-[unset] fade-in">
+                        <div class="title title-secondary title-green-regular">
+                          <h5>Title 1</h5>
+                        </div>
+                        <div class="content content-gray mt-10">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="zigzag-content flex flex-row-reverse items-center w-full xxl:px-[150px] gap-[150px] mdscreen:gap-[55px] mdscreen:flex-col mt-40 relative">
+                    <div class="absolute top-50per mdscreen:top-[296px] xsscreen:top-[198px] translate-x-minus_50 translate-y-minus_50 left-[50.5%] z-20 fade-in">
+                        <div class="content content-yellow bg-brown w-[70px] h-[70px] flex items-center justify-center rounded-100per font-bold year-info">
                             <p>2022</p>
                         </div>
                     </div>
@@ -336,7 +392,7 @@
          <!-- ========================================================== ISO SECTION ========================================================== -->
 
          <section class="iso-section py-75 mdscreen:py-50 bg-semiwhite">
-            <div class="flex items-center max-w-[545px] mx-auto justify-between smscreen:px-10 fade-in">
+            <div class="grid grid-cols-3 items-center max-w-[545px] mx-auto justify-between smscreen:px-10 fade-in">
                 <div class="flex items-center">
                     <img src="../assets/images/png/iso-1.png"
                         class="mdscreen:w-[75%] xsscreen:w-[60%] opacity-50 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer"

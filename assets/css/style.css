@@ -490,14 +490,14 @@
   /* ========================================================== FARMING SECTION ========================================================== */
 
   .farming-section {
-    @apply bg-[url(../../images/png/farm-landscape-2.png)] bg-no-repeat bg-contain bg-bottom;
+    @apply bg-[url(../../images/png/farm-landscape-2.png)] bg-no-repeat bg-contain bg-bottom mdscreen:bg-none;
   }
 
   .clip-pathimg {
     @apply relative;
   }
   .clip-pathimg::before {
-    @apply content-[""] absolute top-0 left-0 bg-contain bg-no-repeat bg-[url('../../images/png/brownshape.png')] w-full h-full;
+    @apply content-[""] absolute top-0 left-0 bg-contain bg-no-repeat bg-[url('../../images/png/brownshape.png')] w-full h-full mdscreen:hidden;
   }
   .farm-img {
     @apply relative;
@@ -664,6 +664,12 @@
     .timeline-section{
       @apply bg-[url('../../images/png/about-bg.png')] bg-cover
     }
+    .year-info{
+      @apply transition-all ease-out duration-300
+    }
+    .year-info.active{
+      @apply !bg-yellow !text-brown transition-all ease-out duration-300
+    }
 
     /* ========================================================== ABOUT SLIDER SECTION ========================================================== */
 
@@ -692,7 +698,7 @@
 
     .timeline-section .swiper-button-next,
     .timeline-section .swiper-button-prev{
-      @apply !text-yellow  bg-brown p-15 rounded-100per w-[55px] h-[55px] 
+      @apply !text-yellow  bg-brown p-15 rounded-100per w-[55px] h-[55px] 576screen:w-[45px] 576screen:h-[45px]
     }
     .timeline-section .swiper-button-next:after,
     .timeline-section .swiper-button-prev:after{
@@ -703,6 +709,9 @@
     }
     .timeline-section .swiper-button-prev{
       @apply lg:-translate-x-[35px]
+    }
+    .timeline-section .zigzag-content{
+      @apply mdscreen:pb-40 smscreen:pb-20 mdscreen:mt-0
     }
     /* @keyframes moveCircle {
       0% {
@@ -771,5 +780,15 @@
     }
     .search-detail{
       @apply py-20
+    }
+
+    .health-benefits ul{
+      @apply flex flex-col gap-[30px] mdscreen:gap-[20px]
+    }
+    .health-benefits ul li{
+      @apply font-Nunito text-green-300 relative pl-20
+    }
+    .health-benefits ul li::before{
+      @apply content-[""] absolute top-[7px] left-0 bg-green-300 w-[10px] h-[10px] rounded-100per
     }
 }
